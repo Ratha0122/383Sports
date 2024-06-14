@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--tailwindcss-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- font awesome..! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!--style css-->
+    <link rel="stylesheet" href="./style.css">
+    <!--icon-->
+    <title>383Sports | Sòng Bạc Đáng Tin Cậy Việt Nam 2022</title>
+</head>
+
+<style>
+    .active {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <!--backtop-->
+    <a href="" class="back"></a>
+
+
+
+    <header class=" from-gray-900 to-gray-600 bg-gradient-to-r text-white">
+        <nav class=" relative mx-auto">
+            <div class="container flex justify-between items-center space-x-2 px-4 py-2">
+                <button id="mobile-icon" class="sm:hidden border h-8 w-14 rounded-lg text-white">
+                    <i onclick="changeIcon(this)" class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="flex max-sm:justify-center cursor-pointer space-x-4 items-center  w-full">
+                    <div class="logo">
+                        <a href="./homepage.html"><img src="./images/383sports-tet.png" alt="" class="w-[120px]"></a>
+                    </div>
+                    <div class="login hidden sm:block">
+                        <ul class="flex justify-center items-center space-x-4">
+                            <li class=""><a onclick=url() class="hover:no-underline">Đăng nhập</a></li>
+                            <li class="bg-orange-600 py-1 px-4 rounded-full hover:opacity-90"><a onclick=url()
+                                    class="hover:no-underline">Đăng ký</a></li>
+                        </ul>
+                    </div>
+                    <div class="sm:block hidden">
+                        <img src="./images/app.png" alt="" class="w-10  ">
+                    </div>
+                </div>
+                <div class=" flex space-x-2 items-center text-[18px]">
+                    <div class="icon f">
+                        <img src="./images/vi.png" alt="" class="sm:w-12 w-28">
+                    </div>
+                    <div class="">
+                        <span>Tiếngviệt</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--mobile-menu-->
+            <div id="mobile-menu"
+                class="mobile-menu absolute h-screen top-[70px] left-[-100%] transition-all duration-500 w-full flex justify-center  p-4 bg-slate-900  space-y-4 font-medium text-[18px]">
+                <div class="cursor-pointer">
+
+                    <div class="login">
+                        <ul class="flex items-center space-x-4">
+                            <li><a onclick=url() class="hover:no-underline">Đăng nhập</a></li>
+                            <li class="bg-orange-600 py-1 px-4 rounded-full hover:opacity-90"><a onclick=url()
+                                    class="hover:no-underline">Đăng ký</a></li>
+                        </ul>
+                    </div>
+                    <div class="app *:flex *:items-center mt-10 *:font-normal">
+                        <h1>App - <img src="./images/app.png" alt="" class="w-8"></h1>
+                    </div>
+                    <div class="menu mt-10 ">
+                        <ul class="space-y-6">
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Đăng nhập vào Casino
+                                    383Sports</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Tiền thưởng 383Sports
+                                    Casino</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Phương thức rút tiền </a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Ứng dụng di động
+                                    383Sports</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Phương thức nạp tiền</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Sòng bạc trực tiếp</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Trò chơi trên bàn</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Cá cược thể thao</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Blackjack</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Roulette</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Baccarat</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Poker</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Jackpot</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Lottery</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <section class="bg-[url(https://bons.social/wp-content/themes/bons-social/assets/images/carousel-bg.jpeg)] ">
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                        
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="relative grid grid-cols-1 flex-col-reverse md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">Các khe chơi game tốt nhất! Chơi và
+                                    giành chiến thắng!
+                                </h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl ">Quay các khe</button>
+                                </div>
+
+                            </div>
+                            <duv class="img w-96 flex justify-center">
+                                <img src="./images/main-banner-slot.png" class="d-block w-full text-center" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1  md:grid-cols-2  text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">Niềm vui khó quên khi chơi với người
+                                    chia bài trực tiếp
+                                    từ 383Sports!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Chơi với người chia
+                                        bài</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-live-dealer.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1 md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">
+                                    Nhận phần thưởng lớn từ 383Sports Casino!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Yêu cầu tiền thưởng của
+                                        bạn</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-bonus.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1 md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">
+                                    Nhận phần thưởng lớn từ 383Sports Casino!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Yêu cầu tiền thưởng của
+                                        bạn</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-betting.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="from-slate-700 to-zinc-800 bg-gradient-to-b p-2">
+        <div class="container mb-10">
+            <div class="text text-white">
+                <div class="*:mt-4">
+                    <span class="font-serif"><b>383sport </b>>
+                        Cá cược thể thao
+                    </span>
+                    <h2 class="text-[22px] md:text-2xl font-medium">
+                        Cá cược thể thao</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Dịch vụ cá cược thể thao 383Sports uy tín, kịch tính, vô
+                        vàn phần thưởng hấp dẫn</h2>
+                    <p>Cá cược thể thao 383Sports đang nhận được sự quan tâm của người chơi tại Việt Nam. Cùng đọc bài viết
+                        dưới đây để hiểu rõ hơn về dịch vụ cá cược thể thao 383Sports uy tín với vô vàn bộ môn kịch tính và
+                        phần thưởng hấp dẫn.</p>
+
+                </div>
+
+
+                <div class="*:mt-4 p-2">
+
+
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/sports-betting-1.png" alt="">
+                        </div>
+
+                    </div>
+                    <h2 class="text-[22px] md:text-2xl font-medium">TCá cược thể thao 383Sports là gì?
+                    </h2>
+                    <p>Cá cược thể thao đã trở thành một trò chơi phổ biến trên toàn thế giới. Đây là một trong cách tuyệt vời để thử vận may của mình và nhận tiền thưởng lớn. 383Sports là một trong những nhà cái uy tín trên thế giới và nay đã có mặt tại Việt Nam. Để hiểu rõ hơn về hình thức cá cược thể thao 383Sports, đừng bỏ qua bài viết dưới đây nhé.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/sports-betting-2.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Cá cược thể thao 383Sports hoạt động như thế nào?
+                    </h2>
+                    <p>Cá cược thể thao là một hình thức đặt cược tiền trực tuyến. Các trang web cờ bạc thể thao cung cấp cho người chơi nhiều trò chơi khác nhau như xổ số, casino trực tuyến và đua ngựa. Bạn có thể tham gia dự đoán kết quả của các trận đấu thể thao khác nhau bao gồm bóng đá, bóng rổ, quần vợt và cầu lông. Bộ môn bóng đá vẫn được yêu thích hơn cả bởi nhờ vào sức hút từ các đội tuyển nổi tiếng và những siêu sao cầu thủ trên sân cỏ.</p>
+
+
+                    <p>Việc tham gia cá cược thể thao trên 383Sports cũng khá đơn giản đối với những thành viên từ 21 tuổi trở lên. Quy trình cơ bản sẽ là:</p>
+                    
+                    <ul class="list-disc px-4">
+                        <li>Đăng ký và nạp tiền: Để bắt đầu cược thể thao trên 383Sports, bạn cần phải đăng ký tài khoản trên trang web của 383Sports Casino. Sau đó, bạn sẽ có thể nạp tiền vào tài khoản để bắt đầu chơi. 383Sports cung cấp nhiều phương thức thanh toán khác nhau cho người dùng, bao gồm chuyển khoản ngân hàng, thẻ tín dụng, ví điện tử, tiền điện tử,…</li>
+                        <li>Lựa chọn các kênh cược: Chắc chắn rồi, đây là bước không thể thiếu và là phần thích thú nhưng không kém phần căng thẳng. 383Sports cung cấp nhiều kênh cược khác nhau cho người dùng. Bạn có thể đặt cược trực tiếp trên các trận đấu đang diễn ra, hoặc đặt cược trước trận để dự đoán kết quả của trận đấu trước khi nó bắt đầu. Nếu bạn yêu thích đua ngựa, bạn có thể đặt cược vào các giải đua lớn như Kentucky Derby và Preakness Stakes.</li>
+                    </ul>
+                   
+                    <p>Để xem lại lịch sử đặt cược của mình khi bấm vào biểu tượng như trong hình minh họa dưới đây..</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/sports-betting-3.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Tại sao không có gian lận trong cá cược thể thao 383Sports?
+                    </h2>
+
+
+                    <p>Nhà cái 383Sports luôn đặt sự minh bạch lên hàng đầu. 383Sports cung cấp cho người chơi một bảng tỷ lệ cược rõ ràng và chi tiết, giúp người chơi có thể dễ dàng theo dõi và phân tích. Ngoài ra, 383Sports Casino cũng cung cấp cho người chơi các công cụ như đồ thị, số liệu thống kê và các thông tin khác để hỗ trợ cho việc cá cược của họ. Tất cả những thông tin này đều được cập nhật liên tục và công khai. Điều này giúp người chơi có thể tin tưởng vào tính công bằng và minh bạch của nhà cái 383Sports.
+                    </p>
+                    <p>383Sports Casino cũng đặt sự an toàn và bảo mật thông tin lên hàng đầu. 383Sports sử dụng các công nghệ tiên tiến nhất để bảo vệ thông tin cá nhân và tài khoản của người chơi. Tất cả các giao dịch cá cược đều được mã hóa và bảo vệ bằng các thuật toán mạnh mẽ. 383Sports cũng sử dụng các công nghệ kiểm soát và phát hiện gian lận để đảm bảo tính công bằng trong các trò chơi.</p>
+
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Cá cược thể thao 383Sports có bất hợp pháp không?
+                    </h2>
+                    <p>Đánh bạc trực tuyến là vấn đề khá nhạy cảm ở nhiều nước. Tại nhiều nước, cờ bạc là hành vi vi phạm pháp luật. Do đó, rất nhiều tổ chức tại đất nước đó đã phải đặt trụ sở tại đất nước có chính sách cởi mở hơn với vấn đề cá cược thể thao. Hiện nay, có khoảng hơn 70 quốc gia cho phép các trang web về casino hoạt động. Bao gồm các nước như: Úc, Pháp, Đức, New Zealand, Hàn Quốc,…</p>
+                    <p>Tuy nhiên, trước khi bắt đầu vào cuộc chơi cá cược trên các website trực tuyến, bạn cần đăng ký thông tin và chấp nhận các điều khoản được đưa ra. Chính vì vậy, bạn luôn phải đọc kỹ mọi thông tin trước khi đồng ý bất kỳ điều khoản nào. Đồng thời xác định rõ các quyền và trách nhiệm của bản thân khi tham gia hoạt động cờ bạc trên lãnh thổ đất nước mình. Điều này giúp bạn tránh các rắc rối không đáng có trong tương lai.</p>
+
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Tính năng cá cược thể thao 383Sports</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Tận hưởng các trận đấu trực tiếp</h2>
+                    <p>Rất nhiều bộ môn được phát sóng trực tiếp. Do đó, bạn có thể đặt cược và cùng tận hưởng trận đấu. Đồng thời, cũng sẽ có một số dạng đặt cược trong lúc trận đấu diễn ra. Điều này tạo nên phần kịch tính và công bằng hơn khi đưa ra quyết định đặt cược.</p>
+
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Da dạng bộ môn thể thao có thể đặt cược</h2>
+
+                    <p>Khi vừa truy cập vào giao diện cá cược thể thao, bạn sẽ cảm thấy cực kì phấn khích khi xuất hiện rất nhiều bộ môn thể thao mà bạn có thể đặt cược. Chẳng hạn như bóng đá, quần vợt, bóng chuyền, esports, bóng chày, bóng rổ, khúc côn cầu trên băng, đấm bốc, bóng bầu dục,… Chỉ với những cú nhấp chuột linh hoạt, bạn hoàn toàn có thể dễ dàng đặt cược vào những gì mình dự đoán. Với vô vàn trò chơi, thật khó có thể khiến bạn nhàm chán. Đó là một trong những điểm nổi bật khi nhắc tới tính năng cá cược thể thao 383Sports.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/sports-betting-4.png" alt="">
+                        </div>
+                        <div class="flex justify-center">
+                            <span><i>Rất nhiều bộ môn thể thao bạn có thể đặt cược</i></span>
+                        </div>
+
+                    </div>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Các loại cược phong phú</h2>
+
+                    <p>Khách hàng của 383Sports Casino cũng có thể thỏa sức lựa chọn các loại cược khác nhau, từ cược truyền thống như cược đội thắng, cược tổng số bàn thắng, đến những loại cược đặc biệt như cược kết quả hiệp 1 hoặc hiệp 2, cược số lần phạt góc, cược tỷ số chính xác, và còn nhiều hơn thế nữa. Với các loại cược phong phú này, khách hàng có thể đặt cược theo cách của riêng mình và tăng khả năng trúng cược.</p>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Cập nhật tin tức thể thao</h2>
+
+
+                    <p>Khách hàng của 383Sports Casino cũng có thể cập nhật các tin tức về thể thao cập nhật hàng ngày, bao gồm thông tin về các trận đấu sắp tới, thông tin về đội bóng, cầu thủ, và cả những thông tin khác để giúp khách hàng có những quyết định cá cược tốt nhất. Bên cạnh đó, 383Sports Casino cũng cung cấp các chuyên gia dự đoán kết quả các trận đấu, giúp khách hàng cân nhắc và đặt cược một cách chính xác.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/sports-betting-6.png" alt="">
+                        </div>
+                        <div class="flex justify-center">
+                            <span><i>Các thông số chi tiết được đưa ra trước khi quyết định đặt cược</i></span>
+                        </div>
+
+                    </div>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Chiến thuật chỉ dành cho người chơi tại Cá cược thể thao</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Nằm lòng bàn tay về các tỷ lệ cược</h2>
+
+                    <p>Một trong những điều quan trọng nhất khi cá cược thể thao tại 383Sports Casino là hiểu rõ về tỷ lệ cược. Tỷ lệ cược có thể được xác định dựa trên nhiều yếu tố, bao gồm cả kết quả trước đó của đội, vị trí trên bảng xếp hạng và cảm nhận chung về đội bóng. Khi bạn hiểu được tỷ lệ cược, bạn sẽ có thể đưa ra quyết định thông minh để đặt cược với cơ hội chiến thắng cao.
+                    </p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/sports-betting-7.png" alt="">
+                        </div>
+                       
+                    </div>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Quản lý vốn
+                    </h2>
+
+                    <p>Một yếu tố quan trọng khác trong việc cá cược thể thao tại 383Sports Casino là quản lý ngân sách của bạn. Bạn nên đặt một ngân sách cho việc đặt cược và không bao giờ vượt quá số tiền này. Nếu bạn đang thua liên tục, hãy ngừng đặt cược và đợi đến khi bạn có đủ kiến thức và kinh nghiệm để đưa ra quyết định thông minh hơn. Chúng ta cần lưu ý rằng cá cược thể thao là một hình thức giải trí và không nên gây áp lực cho cuộc sống của bạn.</p>
+                   
+                    <h2 class="text-[22px] md:text-2xl font-medium">Nghiên cứu các đội chơi
+                    </h2>
+
+                    <p>Cuối cùng, để tăng cơ hội thắng lớn tại 383Sports Casino, bạn cần phải nghiên cứu kỹ về đội bóng mà bạn đang đặt cược. Hãy tìm hiểu về lịch sử của đội, thành tích, phong độ cũng như các cầu thủ quan trọng. Bạn có thể tìm kiếm thông tin này trên các trang web thể thao hoặc tìm kiếm ý kiến của các chuyên gia thể thao trên mạng. Bằng cách nghiên cứu kỹ về đội bóng, bạn sẽ có thể đưa ra quyết định đúng đắn để đặt cược.
+                    </p>
+
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Quy tắc đặc biệt khi đặt cược thể thao</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Đối với đặt cược Bóng đá</h2>
+                    <p>Một số quy tắc bạn phải nắm rõ khi đặt cược bộ môn bóng đá bao gồm:</p>
+                    <ul class="list-disc px-4">
+                        <li>Cược vào kết quả của một trận đấu sẽ được quyết định dựa trên hai hiệp của số phút dự kiến mỗi hiệp và bất kỳ thời gian nào mà trọng tài thêm vào để bù cho chấn thương và các lần ngừng thi đấu khác. Điều này không bao gồm các hiệp phụ cũng như loạt sút luân lưu nếu không được nêu rõ.</li>
+                        <li>Các quả phạt góc được trao nhưng không được thực hiện sẽ không được tính.</li>
+                        <li>Các bàn phản lưới nhà sẽ không được xem xét cho Cầu thủ ghi bàn bất cứ lúc nào hoặc Cầu thủ ghi X hoặc Cầu thủ ghi bàn tiếp theo hoặc các mục đích dàn xếp khác và bị bỏ qua.</li>
+                        <li>Tất cả những người chơi đã tham gia trận đấu kể từ khi bắt đầu trò chơi hoặc mục tiêu trước đó được coi là người chạy.</li>
+                        <li>Nếu một cầu thủ không có tên trong đội hình xuất phát thì tất cả các cầu thủ sẽ bị vô hiệu.</li>
+                        <li>Nếu vì bất kỳ lý do gì mà một cầu thủ không có tên trong danh sách ghi bàn thì tất cả cược cho các cầu thủ có tên trong danh sách đều có hiệu lực.</li>
+                        <li>Bất cứ lúc nào Cầu thủ ghi bàn hoặc Cầu thủ ghi điểm X hoặc thị trường Cầu thủ ghi bàn tiếp theo sẽ được giải quyết dựa trên phụ trang truyền hình và số liệu thống kê do Press Association cung cấp trừ khi có bằng chứng rõ ràng rằng những số liệu thống kê này không chính xác.</li>
+                        <li>Thị trường khoảng thời gian sẽ được giải quyết dựa trên thời gian mục tiêu được công bố bởi TV. Nếu không có, thời gian theo đồng hồ trận đấu được xem xét.</li>
+                        <li>Cược bàn thắng cách quãng được tính dựa trên thời gian bóng đi qua vạch vôi, chứ không phải thời điểm thực hiện quả phát bóng.</li>
+                        <li>Kèo phạt góc được tính dựa trên thời gian thực hiện quả phạt góc chứ không phải thời gian quả phạt góc được hưởng hoặc được hưởng.</li>
+                        <li>Thị trường đặt trước khoảng thời gian được giải quyết dựa trên thời gian thẻ được hiển thị chứ không phải thời gian vi phạm được thực hiện.</li>
+                        <li>Lỗi việt vị sẽ được tính dựa trên thời gian trọng tài đưa ra quyết định. Quy tắc này sẽ được áp dụng cho mọi tình huống hỗ trợ trọng tài video (VAR).</li>
+                        <li>Thị trường phạt đền sẽ được giải quyết dựa trên thời gian trọng tài đưa ra quyết định. Quy tắc này sẽ được áp dụng cho mọi tình huống hỗ trợ trọng tài video (VAR).</li>
+                        <li>Hình phạt được đưa ra nhưng không được thực hiện không được xem xét.</li>
+                        <li>Loại ghi bàn tiếp theo. Đá phạt trực tiếp: Bàn thắng phải được ghi trực tiếp từ quả phạt trực tiếp hoặc phạt góc để được coi là bàn thắng bằng quả đá phạt trực tiếp. Các cú sút chệch hướng được tính miễn là người đá phạt trực tiếp hoặc người thực hiện quả phạt góc được ghi bàn thắng. Phạt đền: Bàn thắng phải được ghi trực tiếp từ chấm phạt đền. Các bàn thắng sau khi thực hiện lại một quả phạt đền bị bỏ lỡ không được tính. Phản lưới nhà: Nếu bàn thắng được tuyên bố là phản lưới nhà. Đánh đầu: Cú chạm cuối cùng của cầu thủ ghi bàn phải là đánh đầu. Cú sút: Bàn thắng phải được thực hiện bằng bất kỳ bộ phận nào khác của cơ thể ngoài đầu và các loại khác không áp dụng. Không có Bàn thắng.</li>
+                        <li>Nếu thị trường được mở với một thẻ đỏ bị thiếu hoặc không chính xác, chúng tôi có quyền hủy đặt cược.</li>
+                        <li>Nếu tỷ lệ cược được đưa ra với thời gian trận đấu không chính xác (hơn 5 phút), chúng tôi có quyền hủy đặt cược.</li>
+                        <li>Nếu nhập sai tỷ số, tất cả thị trường sẽ bị hủy trong thời gian tỷ số không chính xác được hiển thị</li>
+                        <li>Nếu tên đội hoặc danh mục được hiển thị không chính xác, chúng tôi có quyền hủy đặt cược.</li>
+                        <li>Thẻ vàng được tính là 1 thẻ và thẻ đỏ hoặc vàng-đỏ là 2. Thẻ vàng thứ 2 cho một cầu thủ dẫn đến thẻ vàng-đỏ không được tính. Do đó, một người chơi không thể tạo ra nhiều hơn 3 thẻ.</li>
+                        <li>Việc giải quyết sẽ được thực hiện dựa trên tất cả các bằng chứng có sẵn về thẻ được đưa ra trong 90 phút thi đấu thông thường.</li>
+                        <li>Thẻ được hiển thị sau trận đấu không được xem xét.</li>
+                        <li>Thẻ dành cho người không chơi (người chơi đã thay thế, người quản lý, người chơi trên băng ghế dự bị) không được xem xét</li>
+                        <li>Thẻ vàng được tính là 10 điểm và thẻ đỏ hoặc vàng-đỏ là 25. Thẻ vàng thứ 2 cho một cầu thủ dẫn đến thẻ vàng-đỏ không được tính. Do đó, một người chơi không thể gây ra nhiều hơn 35 điểm đặt chỗ.</li>
+                    </ul>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Quy tắc đặc biệt khi đặt cược quần vợt</h2>
+                    <ul class="list-disc px-4">
+                        <li>Trong trường hợp rút lui và bỏ cuộc của bất kỳ người chơi nào, tất cả các cược chưa quyết định đều bị coi là vô hiệu.</li>
+                        <li>Trong trường hợp có bất kỳ sự chậm trễ nào (mưa, trời tối…), tất cả các thị trường vẫn chưa ổn định và giao dịch sẽ được tiếp tục ngay khi trận đấu tiếp tục.</li>
+                        <li>Nếu trọng tài cho (các) điểm phạt, tất cả cược vào trận đấu đó sẽ có hiệu lực.</li>
+                        <li>Nếu một trận đấu được hoàn thành trước khi một số điểm/trò chơi nhất định được hoàn thành, thì tất cả các thị trường bị ảnh hưởng liên quan đến các điểm/trò chơi đó được coi là không hợp lệ.</li>
+                        <li>Nếu thị trường vẫn mở với tỷ số không chính xác có tác động đáng kể đến giá cả, chúng tôi có quyền hủy đặt cược.</li>
+                        <li>Nếu người chơi/đội được hiển thị không chính xác, chúng tôi có quyền hủy đặt cược.</li>
+                        <li>Bất cứ lúc nào Cầu thủ ghi bàn hoặc Cầu thủ ghi điểm X hoặc thị trường Cầu thủ ghi bàn tiếp theo sẽ được giải quyết dựa trên phụ trang truyền hình và số liệu thống kê do Press Association cung cấp trừ khi có bằng chứng rõ ràng rằng những số liệu thống kê này không chính xác.</li>
+                        <li>Nếu một người chơi rút lui, tất cả các thị trường chưa quyết định được coi là vô hiệu.
+                            .</li>
+                        <li>Nếu trận đấu được phân định bằng tie-break thì đó sẽ được coi là set thứ 3.</li>
+                        <li>Mỗi tie-break hoặc Match tie-break được tính là 1 ván đấu.</li>
+                    </ul>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Quy tắc đặc biệt khi đặt cược bóng chuyền</h2>
+                    <ul class="list-disc px-4">
+                        <li>Nếu hiệp đấu kết thúc trước khi đạt đến điểm thứ X, thị trường này (Người ghi điểm trong hiệp đấu) được coi là vô hiệu (bị hủy)</li>
+                        <li>Trong trường hợp trận đấu chưa kết thúc, tất cả các thị trường chưa quyết định được coi là vô hiệu.</li>
+                        <li>Bộ vàng không được xem xét ở bất kỳ thị trường nào được đề cập</li>
+                        <li>Nếu thị trường vẫn mở với tỷ số không chính xác có tác động đáng kể đến giá cả, chúng tôi có quyền hủy đặt cược.</li>
+                        <li>Nếu một đội rút lui, tất cả các thị trường chưa quyết định được coi là vô hiệu.</li>
+                        <li>Các khoản khấu trừ điểm chính thức sẽ được tính cho tất cả các thị trường không xác định. Các thị trường đã được xác định sẽ không tính các khoản khấu trừ.</li>
+                    </ul>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Quy tắc đặc biệt khi đặt cược vào Fusal (bóng đá trong nhà)</h2>
+                    <ul class="list-disc px-4">
+                        <li>Tất cả các kèo (ngoại trừ hiệp một, hiệp một, bù giờ và đá luân lưu) chỉ được tính cho thời gian thi đấu thông thường.</li>
+                        <li>Nếu trận đấu bị gián đoạn và tiếp tục trong vòng 48 giờ sau ngày bắt đầu trận đấu đầu tiên, tất cả các cược mở sẽ được giải quyết với kết quả cuối cùng. Nếu không, tất cả các cược chưa quyết định được coi là vô hiệu.</li>
+                        <li>Nếu thị trường vẫn mở khi các sự kiện sau đã diễn ra: bàn thắng, thẻ đỏ hoặc vàng-đỏ và phạt đền, chúng tôi có quyền hủy đặt cược.</li>
+                        <li>Nếu thị trường được mở với một thẻ đỏ bị thiếu hoặc không chính xác, chúng tôi có quyền hủy đặt cược.</li>
+                        <li>Nếu tỷ lệ cược được cung cấp với thời gian trận đấu không chính xác (hơn 2 phút), chúng tôi có quyền hủy đặt cược.</li>
+                        <li>Nếu nhập sai tỷ số, tất cả thị trường sẽ bị hủy trong thời gian tỷ số không chính xác được hiển thị.</li>
+                        <li>Nếu tên đội hoặc danh mục được hiển thị không chính xác, chúng tôi có quyền hủy đặt cược.</li>
+                    </ul>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Bộ môn cá cược thể thao được yêu thích trên 383Sports</h1>
+                    <ul class="list-disc *:mt-4">
+                        <li><b>Bóng đá:</b>Đây là một trong những bộ môn có hàng triệu người hâm mộ khắp trên thế giới. Không chỉ quan tâm theo dõi các trận đấu, rất nhiều người còn lựa chọn cá cược như một phần thưởng để chứng mình đoán đúng. Tuy nhiên, cũng không ít người rơi vào cảnh trắng tay vì cá độ bóng đá. Vì vậy bạn hãy cân nhắc kỹ trước khi tham gia nhé!</li>
+                        <div class="">
+                            <div class="img flex justify-center items-center">
+                                <img src="./images/sports-betting-8.png" alt="">
+                            </div>
+                            <div class="flex justify-center">
+                                <span><i>Giao diện cá cược bóng đá</i></span>
+                            </div>
+    
+                        </div>
+                        <li><b> Bóng chuyền:</b>Tại Việt Nam, bóng chuyền là một bộ môn khá quen thuộc với tất cả mọi người. Chính vì sự quen thuộc này mà người chơi dễ dàng hiểu luật và đưa ra mức cược phù hợp.</li>
+                        <div class="">
+                            <div class="img flex justify-center items-center">
+                                <img src="./images/sports-betting-9.png" alt="">
+                            </div>
+                            <div class="flex justify-center">
+                                <span><i>Giao diện đặt cược bóng chuyền</i></span>
+                            </div>
+    
+                        </div>
+                        <li><b> Quần vợt:</b>Bộ môn này ngày càng được sự quan tâm của đông đảo người chơi. Bên cạnh sự thú vị và đầy kịch tính khi một chọi một hay hai chọi hai, đây cũng là bộ môn có tỷ lệ cược tốt. Đồng thời, thỉnh thoảng bộ môn này cũng được phát trực tiếp vì các quy định về quyền cấp phép không quá nghiêm ngặt như bộ môn bóng đá.</li>
+                        <div class="">
+                            <div class="img flex justify-center items-center">
+                                <img src="./images/sports-betting-10.png" alt="">
+                            </div>
+                            <div class="flex justify-center">
+                                <span><i>Giao diện cá cược quần vợt</i></span>
+                            </div>
+    
+                        </div>
+                        <li><b>Thể thao điện tử:</b> Với sự phát triển của công nghệ hiện nay, càng nhiều người tham gia vào cái trò chơi điện tử. Đó cũng là cơ hội đã những tay cá cược đưa ra dự đoán về người chiến thắng và dành tiền thưởng.</li>
+                        <div class="">
+                            <div class="img flex justify-center items-center">
+                                <img src="./images/sports-betting-10.png" alt="">
+                            </div>
+                            <div class="flex justify-center">
+                                <span><i>Giao diện đặt cược điện tử</i></span>
+                            </div>
+    
+                        </div>
+                    </ul>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Các nhà cung cấp trò chơi cung cấp Cá cược thể thao tại 383Sports Casino</h1>
+                    <p>Hiện nay, có rất nhiều nhà cung cấp cá cược thể thao, chẳng hạn như:</p>
+
+                    <h1 class="text-[22px] md:text-2xl font-medium">Nhà cung cấp 1xBet</h1>
+                    <p>1xBet là một nhà cung cấp hàng đầu về cá cược thể thao trên sòng bạc 383Sports Casino. Với hơn 50 ngàn trận đấu hàng tháng, 1xBet cung cấp cho người chơi đa dạng các thể loại từ bóng đá, bóng bầu dục, đua xe, đến cả các trận đấu eSports. 1xBet cũng nổi tiếng với các khuyến mãi hấp dẫn và đội ngũ hỗ trợ khách hàng chuyên nghiệp.</p>
+
+                    <h1 class="text-[22px] md:text-2xl font-medium">Nhà cung cấp Bet365</h1>
+                    <p>Bet365 là một nhà cung cấp cá cược thể thao uy tín và được nhiều người chơi đánh giá cao trên sòng bạc 383Sports Casino. Với hơn 40 ngàn trận đấu hàng tháng, Bet365 cung cấp cho người chơi đa dạng các thể loại từ bóng đá, bóng rổ, đua xe đến các trận đấu thể thao điện tử. Bet365 cũng nổi tiếng với các khuyến mãi hấp dẫn và giao diện đơn giản, dễ sử dụng.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Nhà cung cấp Pinnacle</h1>
+                    <p>Pinnacle là một nhà cung cấp cá cược thể thao chuyên nghiệp và được nhiều người chơi đánh giá cao trên sòng bạc 383Sports Casino. Pinnacle cung cấp cho người chơi hơn 20 ngàn trận đấu hàng tháng từ các giải đấu lớn nhỏ trên toàn thế giới. Pinnacle cũng nổi tiếng với tỷ lệ cược cạnh tranh và các định dạng cược đa dạng.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Những điều cần lưu ý khi cá cược thể thao tại 383Sports Casino</h1>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Chọn sự kiện thể thao phù hợp</h1>
+                    <p>Khi tham gia cá cược thể thao tại 383Sports Casino, bạn cần chọn sự kiện thể thao phù hợp để đặt cược. Bạn nên tìm hiểu kỹ về các đội bóng, tay vợt, võ sĩ, hay các VĐV tham gia giải đấu để có những quyết định chính xác. Bạn cũng nên xem xét về tỷ lệ cược và cách tính toán để đặt cược đúng mức, tránh rủi ro và tiết kiệm chi phí.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Nắm bắt các loại cược thể thao
+                    </h1>
+                    <p>383Sports Casino cung cấp nhiều loại cược thể thao khác nhau như cược chấp, cược tổng số bàn thắng, cược tổng số điểm, cược tổng số set, cược tài xỉu, cược chẵn/lẻ, và cược đội thắng. Bạn nên tìm hiểu kỹ về từng loại cược để biết cách sử dụng phù hợp với sự kiện thể thao đang diễn ra. Có như vậy bạn mới có thể tăng khả năng đặt cược chính xác.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Xác định cách đặt cược</h1>
+                    <p>Khi tham gia cá cược thể thao tại 383Sports Casino, bạn cần xác định tính cách đặt cược của mình. Bạn có thể chọn đặt cược trước sự kiện thể thao diễn ra, hoặc đặt cược khi sự kiện đang diễn ra. Ngoài ra, bạn cũng có thể chọn đặt cược đơn, đặt cược kép, hoặc đặt cược nhiều trận đấu cùng một lúc. Việc xác định tính cách đặt cược sẽ giúp bạn có những quyết định đúng đắn và tối ưu hóa kết quả..</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Tại sao cá cược thể thao 383Sports lại hấp dẫn và được đề xuất
+                    </h1>
+                    <p>Sòng bạc Tedbet có nhiều yếu tố làm cho nó hấp dẫn và thường được đề xuất như sau:</p>
+
+
+
+
+
+
+
+                    <h1 class="text-[22px] md:text-2xl font-medium">Truy cập mọi lúc mọi nơi
+                    </h1>
+                    <p>Điểm lợi thế nhất của sòng bạc trực tuyến so với truyền thống chính là việc có thể dễ dàng đặt cược ngay tại nhà bạn. Không cần thiết phải đến một địa điểm nhất định. Chỉ cần bạn có thiết bị truy cập Internet, mọi vấn đề trở nên nhanh chóng và dễ dàng hơn.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Sự đa dạng trong lựa chọn trò chơi
+                    </h1>
+                    <p>Như chúng tôi đã đề cập ở các phần trên, bạn hoàn toàn có thể trải nghiệm đặt cược với  nhiều bộ môn thể thao khác nhau. Từ những bộ môn quen thuộc đối với người dân Việt Nam cho tới những bộ môn thường chỉ xuất hiện ở nước ngoài. Đây cũng là một trong những điểm giúp người dùng được trải nghiệm xem trực tuyến các trận đấu.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Khuyến mãi và tiền thưởng hấp dẫn
+                    </h1>
+                    <p>Nhắc đến khuyến mãi và tiền thưởng, 383Sports Casino là một trong những cái tên nổi bật. Với đa dạng chính sách dành cho mọi cấp độ, từ người mới tới khách hàng trung thành đều nhận được ưu đãi tương xứng. Thậm chí, bạn không cần nạp tiền ban đầu nhưng vẫn được trải nghiệm đặt cược miễn phí.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Bảo mật và an toàn
+                    </h1>
+                    <p>383Sports đã hoạt động tại nhiều nước trên thế giới. Hầu hết đều được bảo mật an toàn. Việc nạp và rút tiền diễn ra thuận lợi. Chính nhờ vậy mà đến nay, 383Sports đã mở rộng sang nhiều nước khác nhau, trong đó có Việt Nam. Tuy nhiên, đừng bao giờ khiến bản thân nghiện cờ bạc. Hãy chơi trong giới hạn cho phép.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Lịch sử sòng bài cá cược thể thao 383Sports
+                    </h1>
+                    <p>383Sports Casino được thành lập vào năm 2020 bởi Nestling Corn Limited. Ban đầu, sòng bài này chỉ chuyên về các trò chơi sòng bài trực tuyến như baccarat, blackjack, và roulette. Tuy nhiên, với sự phát triển của công nghệ và nhu cầu của khách hàng, 383Sports Casino đã thêm vào danh mục của mình các trò chơi cá cược thể thao trực tuyến.</p>
+                    <p>Với sự phát triển của các giải đấu thể thao quốc tế và nhu cầu của người chơi, 383Sports Casino đã đưa vào danh mục của mình các trò chơi cá cược thể thao trực tuyến như bóng đá, bóng rổ, bóng chuyền, và cả đua ngựa. Người chơi có thể đặt cược trực tiếp trên sàn đấu hoặc đặt cược trước theo dõi kết quả sau đó. 383Sports Casino cung cấp cho khách hàng một trải nghiệm cá cược thể thao tuyệt vời với các cược đa dạng và tỉ lệ cược cạnh tranh.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Tương lai của sòng bạc trực tuyến tại Việt Nam là gì?
+                    </h1>
+                    <p>Như bạn đã biết, Việt Nam là đất nước không cổ vũ cho hoạt động bài bạc trực tuyến. Hiện tại, chỉ có một số hoạt động cá cược được cho phép. Chẳng hạn như: Đặt cược bóng đá quốc tế, xổ số,…</p>
+                    <p>Với sự du nhập của nhiều hình thức đặt cược từ nước ngoài, chính phủ sẽ cần có thời gian quan sát và nghiên cứu. Trong tương lai, chính phủ có thể thay đổi quyết định, nới lỏng vấn đề đặt cược. Nhưng một điều chắc chắn là phải nằm trong tầm kiểm soát. Tuy nhiên, tất cả chỉ là sự phỏng đoán, hãy tiếp tục theo dõi sát xao những động tháo của chính phủ và cơ quan quản lý.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Tóm tắt nguyên tắc về cá cược thể thao trên 383Sports
+                    </h1>
+                    <p>Có rất nhiều quy tắc cá cược mà bạn cần nắm rõ khi cá cược thể tại 383Sports Casino. Tất cả được chia sẻ chi tiết trong bài viết dưới đây. Hãy bấm vào đọc để hiểu rõ hơn về vần đền này nhé! <span class="text-blue-500">https://383sport.net</span></p>
+
+
+
+
+
+                    <h1 class="text-[22px] md:text-2xl font-medium">Câu hỏi thường gặp về Sòng bạc Tedbet trực tuyến
+                    </h1>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Bao nhiêu tuổi được cá cược thể thao trên 383Sports?
+                    </h1>
+                    <p>Tại Việt Nam, bạn phải đủ 21 tuổi để tham gia cá cược thể thao trên 383Sports.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Cá cược thể thao trên 383Sports có an toàn không?
+                    </h1>
+                    <p>Có, 383Sports Casino rất coi trọng sự an toàn và bảo mật của người chơi. Trang web sử dụng các giao thức bảo mật tiêu chuẩn của ngành để bảo vệ thông tin cá nhân và tài chính của người chơi.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Có ưu đãi nào khi tham gia cá cược 383Sports không?
+                    </h1>
+                    <p>Có, 383Sports Casino cung cấp nhiều loại tiền thưởng và khuyến mãi cho cả người chơi mới và người chơi hiện tại. Chúng có thể bao gồm tiền thưởng nạp tiền, vòng quay miễn phí và ưu đãi hoàn lại tiền.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Phương thức thanh toán có sẵn tại 383Sports
+                    </h1>
+                    <p>Có rất nhiều hình thức thanh toán khác nhau tại 383Sports. Bao gồm: thẻ ngân hàng, thẻ Visa, Mastercard, ví điện tử MoMo, thanh toán bằng tiền điện tử,…
+
+                    </p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Có giới hạn khi rút tiền không?
+                    </h1>
+                    <p>Có. Các giới hạn chính xác phụ thuộc vào phương thức thanh toán đã chọn và trạng thái tài khoản của người chơi.</p>
+                    <h1 class="text-[22px] md:text-2xl font-medium">Lời kết
+                    </h1>
+                    <p>Hy vọng với những thông tin trên đã giúp bạn hiểu hơn về cá cược thể thao 383Sports. Nếu bạn có bất kì thắc mắc nào, đừng ngại liên hệ với bộ phận chăm sóc khách hàng để được giải đáp nhanh chóng và chính xác nhé!</p>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--foooter -->
+    <footer class="from-black to-sky-800 bg-gradient-to-b text-white ">
+        <div class="container flex justify-center items-center">
+            <div class="p-2 ">
+                <div class="mt-10 mb-10  grid grid-cols-2 md:grid-cols-3 gap-12 justify-center items-center">
+                    <div class="logo flex justify-center items-center">
+                        <img src="./images/383sports-tet.png" alt="">
+                    </div>
+                    <div class="img-icon flex justify-center items-center">
+                        <img src="./images/Screenshot 2024-06-13 162004.png" alt="">
+                    </div>
+                    <div class=" space-x-2 text-[18px] flex justify-center items-center">
+                        <div class="icon f">
+                            <img src="./images/vi.png" alt="" class="sm:w-12 w-28">
+                        </div>
+                        <div class="">
+                            <span>Tiếngviệt</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center border-b items-center">
+                    <span class="text-2xl">Categories</span>
+                    <span></span>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 cursor-pointer gap-8 justify-center  mx-auto ">
+                    <div class="w-full flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Đăng-nhập-vào-Casino-383Sport.html"
+                                        class="hover:text-blue-400 ">Đăng nhập vào Casino
+                                        383Sports</a></li>
+                                <li class="hover:border-b"><a href="./Phương-thức-rút-tiền.html"
+                                        class="hover:text-blue-400 ">Phương thức rút tiền </a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Sòng-bạc-trực-tiếp.html"
+                                        class="hover:text-blue-400 ">Sòng bạc trực tiếp</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Blackjack.html"
+                                        class="hover:text-blue-400 ">Blackjack</a></li>
+                                <li class="hover:border-b"><a href="./Poker.html" class="hover:text-blue-400 ">Poker</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--col2-->
+                    <div class="col2 flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Đăng-ký-tại-sòng-bạc-383Sports.html"
+                                        class="hover:text-blue-400 ">
+                                        Đăng ký tại sòng bạc 383Sports</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Ứng-dụng-di-động-383Sports.html"
+                                        class="hover:text-blue-400 ">Ứng dụng di động 383Sports</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Trò-chơi-trên-bàn.html"
+                                        class="hover:text-blue-400 ">Trò chơi trên bàn</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Roulette.html"
+                                        class="hover:text-blue-400 ">Roulette</a></li>
+                                <li class="hover:border-b"><a href="./Jackpot.html"
+                                        class="hover:text-blue-400 ">Jackpot</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--col3-->
+                    <div class="col3 flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Tiền-thưởng-383Sports-Casino.html"
+                                        class="hover:text-blue-400 ">
+                                        Tiền thưởng 383Sports Casino</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Phương-thức-nạp-tiền.html"
+                                        class="hover:text-blue-400 ">Phương thức nạp tiền</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Cá-cược-thể-thao.html"
+                                        class="hover:text-blue-400 ">Cá cược thể thao</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Baccarat.html"
+                                        class="hover:text-blue-400 ">Baccarat</a></li>
+                                <li class="hover:border-b"><a href="./Lottery.html"
+                                        class="hover:text-blue-400 ">Lottery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!--backtop-->
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

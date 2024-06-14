@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--tailwindcss-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- font awesome..! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!--style css-->
+    <link rel="stylesheet" href="./style.css">
+    <!--icon-->
+    <title>383Sports | Sòng Bạc Đáng Tin Cậy Việt Nam 2022</title>
+</head>
+
+<style>
+    .active {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <!--backtop-->
+    <a href="" class="back"></a>
+
+
+
+    <header class=" from-gray-900 to-gray-600 bg-gradient-to-r text-white">
+        <nav class=" relative mx-auto">
+            <div class="container flex justify-between items-center space-x-2 px-4 py-2">
+                <button id="mobile-icon" class="sm:hidden border h-8 w-14 rounded-lg text-white">
+                    <i onclick="changeIcon(this)" class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="flex max-sm:justify-center cursor-pointer space-x-4 items-center  w-full">
+                    <div class="logo">
+                        <a href="./homepage.html"><img src="./images/383sports-tet.png" alt="" class="w-[120px]"></a>
+                    </div>
+                    <div class="login hidden sm:block">
+                        <ul class="flex justify-center items-center space-x-4">
+                            <li class=""><a onclick=url() class="hover:no-underline">Đăng nhập</a></li>
+                            <li class="bg-orange-600 py-1 px-4 rounded-full hover:opacity-90"><a onclick=url()
+                                    class="hover:no-underline">Đăng ký</a></li>
+                        </ul>
+                    </div>
+                    <div class="sm:block hidden">
+                        <img src="./images/app.png" alt="" class="w-10  ">
+                    </div>
+                </div>
+                <div class=" flex space-x-2 items-center text-[18px]">
+                    <div class="icon f">
+                        <img src="./images/vi.png" alt="" class="sm:w-12 w-28">
+                    </div>
+                    <div class="">
+                        <span>Tiếngviệt</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--mobile-menu-->
+            <div id="mobile-menu"
+                class="mobile-menu absolute h-screen top-[70px] left-[-100%] transition-all duration-500 w-full flex justify-center  p-4 bg-slate-900  space-y-4 font-medium text-[18px]">
+                <div class="cursor-pointer">
+
+                    <div class="login">
+                        <ul class="flex items-center space-x-4">
+                            <li><a onclick=url() class="hover:no-underline">Đăng nhập</a></li>
+                            <li class="bg-orange-600 py-1 px-4 rounded-full hover:opacity-90"><a onclick=url()
+                                    class="hover:no-underline">Đăng ký</a></li>
+                        </ul>
+                    </div>
+                    <div class="app *:flex *:items-center mt-10 *:font-normal">
+                        <h1>App - <img src="./images/app.png" alt="" class="w-8"></h1>
+                    </div>
+                    <div class="menu mt-10 ">
+                        <ul class="space-y-6">
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Đăng nhập vào Casino
+                                    383Sports</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Tiền thưởng 383Sports
+                                    Casino</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Phương thức rút tiền </a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Ứng dụng di động
+                                    383Sports</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Phương thức nạp tiền</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Sòng bạc trực tiếp</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Trò chơi trên bàn</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Cá cược thể thao</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Blackjack</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Roulette</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Baccarat</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Poker</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Jackpot</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Lottery</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <section class="bg-[url(https://bons.social/wp-content/themes/bons-social/assets/images/carousel-bg.jpeg)] ">
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                        
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="relative grid grid-cols-1 flex-col-reverse md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">Các khe chơi game tốt nhất! Chơi và
+                                    giành chiến thắng!
+                                </h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl ">Quay các khe</button>
+                                </div>
+
+                            </div>
+                            <duv class="img w-96 flex justify-center">
+                                <img src="./images/main-banner-slot.png" class="d-block w-full text-center" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1  md:grid-cols-2  text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">Niềm vui khó quên khi chơi với người
+                                    chia bài trực tiếp
+                                    từ 383Sports!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Chơi với người chia
+                                        bài</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-live-dealer.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1 md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">
+                                    Nhận phần thưởng lớn từ 383Sports Casino!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Yêu cầu tiền thưởng của
+                                        bạn</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-bonus.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1 md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">
+                                    Nhận phần thưởng lớn từ 383Sports Casino!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Yêu cầu tiền thưởng của
+                                        bạn</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-betting.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="from-slate-700 to-zinc-800 bg-gradient-to-b p-2">
+        <div class="container mb-10">
+            <div class="text text-white">
+                <div class="*:mt-4">
+                    <span class="font-serif"><b>383sport </b>>
+                        Phương thức nạp tiền
+                    </span>
+                    <h2 class="text-[22px] md:text-2xl font-medium">
+                        Phương thức nạp tiền</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Làm thế nào để nạp tiền 383Sports Casino?</h2>
+                    <p>383Sports Casino là một trong những Casino trực tuyến hàng đầu thế giới. Thật tuyệt vời khi nền tảng
+                        giải trí này đã có mặt tại Việt Nam. Để có thể bắt đầu chơi thì bạn không thể bỏ qua bước nạp
+                        tiền. Trong bài viết này, 383Sports Casino sẽ chia sẻ các phương thức cũng như hướng dẫn chung khi
+                        thực hiện nạp tiền nhé!</p>
+
+                </div>
+
+
+                <div class="*:mt-4 p-2">
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/383Sports_Fortune_Girl_banner_600x300px_VN.gif" alt="">
+                        </div>
+
+                    </div>
+
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Giải thích cặn kẽ về cách hoạt động khi nạp tiền tại
+                        383Sports Casino
+                    </h2>
+                    <p>Về cơ bản, cách thức hoạt động của chức năng nạp tiền sẽ như sau: Khi đã hoàn thành đăng ký tài
+                        khoản, bạn di chuyển tới mục nạp tiền trên thanh menu. Tiếp theo là lựa chọn các hình thức nạp
+                        tiền phù hợp với bản thân. Trong mỗi phương thức sẽ bao gồm nhiều tùy chọn khác mà bạn có thể
+                        cân nhắc. Bước tiếp theo là điền thông tin cần thiết và xác nhận nạp. Số tiền bạn nạp sẽ xuất
+                        hiện trong tài khoản. Đồng thời bạn sẽ nhận được nhiều ưu đãi từ các lần nạp, cụ thể là trong 5
+                        lần đầu tiên. </p>
+                    <p>Để biết thêm về các phương thức nạp tiền có sẵn tại 383Sports Casino, chúng tôi đã liệt kê và hướng
+                        dẫn chi tiết cách thực hiện nạp tiền cho bạn. Cùng đọc ngay.</p>
+
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Danhh sách các phương thức nạp tiền 383Sports Casino
+                    </h2>
+                    <p>Để bắt đầu chơi, bạn cần phải nạp tiền vào tài khoản của mình. 383Sports Casino cung cấp nhiều phương
+                        thức thanh toán khác nhau để giúp bạn làm điều đó. 383Sports sẽ giới thiệu danh sách các phương thức
+                        nạp tiền 383Sports Casino để bạn có thể lựa chọn phương thức phù hợp cho mình ngay dưới đây.</p>
+
+
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Nạp tiền 383Sports Casino bằng thẻ Visa </h2>
+
+                    <p>Visa được coi là một trong những phương thức thanh toán điện tử phổ biến nhất trên thế giới. Một
+                        số ưu và nhược điểm của hình thức thanh toán này như sau:</p>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Tiền thưởng Nạp tiền lần 3
+                    </h2>
+
+                    <span><b>
+                            Cách thức thực hiện nạp tiền bằng Visa như sau:
+
+                        </b></span>
+
+                    <p>Đầu tiên, sau khi đã đăng ký tài khoản, mục nạp tiền sẽ hiện ngay trên thanh menu, bạn chỉ cần bấm vào chức năng nạp tiền.
+                    </p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/383Sports_Fortune_Girl_banner_600x300px_VN.gif" alt="">
+                        </div>
+
+                    </div>
+
+                    <p><b>Bước 2: </b>Bạn hãy bấm chọn mục Visa để tiến hành nạp tiền với Visa của mình.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-3.png" alt="">
+                        </div>
+
+                    </div>
+                    <p><b>Bước 3: </b>Bạn cần nhập các thông tin trên thẻ Visa, bao gồm: Số thẻ, ngày, CVV, tên chủ thẻ. Cuối cùng là nhập số tiền bạn muốn nạp. Có 2 tùy chọn về mức tối đa và tối thiểu mà bạn có thể lựa chọn. Chẳng hạn như, với tùy chọn 1, số tiền tối thiểu bạn có thể nạp là 250.000 đ. Sau khi hoàn tất, bạn bấm chọn “Trả thưởng để được nhận tiền trong 383Sports Casino.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-4.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <p><b>Cách thực hiện nạp tiền bằng thẻ Mastercard</b></p>
+                    <p><b>Bước 1: </b>của nạp tiền bằng thẻ Mastercard sẽ giống với bước 1 khi nạp tiền bằng thẻ Visa. </p>
+                    <p><b>Bước 2: </b>Bạn bấm vào mục Mastercard như ảnh minh họa bên dưới. </p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-5.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <p><b>Bước 3:</b>Bạn cũng sẽ phải điền các thông tin có trên thẻ ứng với các thông số yêu cầu như trong ảnh dưới. Mức tối thiểu và tối đa cũng sẽ là 1500 – 1000000 JPY (248.643đ – 165.762.000đ) đối với tùy chọn 1</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-7.png" alt="">
+                        </div>
+
+                    </div>
+                    <p>Cuối cùng, bấm vào trả thưởng để nạp tiền thành công.</p>
+                    <p><b>Cách nạp tiền 383Sports Casino bằng thẻ JCB:</b></p>
+                    <p>Đầu tiên hãy bấm vào biểu tượng ngân hàng JCB.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-8.png" alt="">
+                        </div>
+
+                    </div>
+                    <p><b>Bước 2: </b> Điền các thông tin thể vào chỗ trống. Số tiền nạp sẽ giao động từ 150.000đ – 20.000.000đ</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-9.png" alt="">
+                        </div>
+
+                    </div>
+                    <p>Cuối cùng là bấm vào “Trả thưởng” để nạp tiền thành công.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Nạp tiền bằng thẻ ngân hàng 
+                    </h2>
+                    <p>Hãy bấm chọn Online Banking và chọn ngân hàng bạn đang có để tiến hành nạp tiền. Một số lựa chọn về ngân hàng bao gồm: ACB, BIDV, VCB, Sacombank, VIB,…</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-10.png" alt="">
+                        </div>
+
+                    </div>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-11.png" alt="">
+                        </div>
+
+                    </div>
+
+                   <p><b>Cách nạp tiền qua ví Momo:</b></p>
+                    <p><b>Bước 1: </b>Bấm vào biểu tượng ví Momo</p>
+
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-12.png" alt="">
+                        </div>
+
+                    </div>
+                    <p><b>Bước 2: </b>Điền số tiền mà bạn muốn nạp. Có tới 4 tùy chọn mà bạn có thể cân nhắc. Các tùy chọn này khác nhau ở mức tối thiểu và tối đa có thể nạp. </p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-13.png" alt="">
+                        </div>
+
+                    </div>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Nạp tiền 383Sports Casino bằng tiền điện tử </h2>
+
+                    <p>Khi công nghệ tiếp tục phát triển, thế giới cờ bạc trực tuyến cũng đang phát triển. Một trong những xu hướng mới nhất trong ngành này là sử dụng tiền điện tử cho các giao dịch. 383Sports Casino là một trong những sòng bạc trực tuyến đã chấp nhận thay đổi này, cho phép người dùng gửi tiền bằng nhiều loại tiền điện tử khác nhau..</p>
+
+               
+
+                    <p>Tại thị trường Việt Nam, hiện tại có đồng coin được hỗ trợ, bao gồm: Bitcoin, Litecoin, Ethereum, Ripple, TetherERC20, TetherTRC20, USDCoin, Cardano, BinanceCoin, BinanceUSD.</p>
+
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-14.png" alt="">
+                        </div>
+
+                    </div>
+
+
+                    <p>Để nạp tiền bằng tiền điện tử, hãy bấm vào đồng coin mà bạn muốn nạp. Mức tối thiểu là 250.000đ, mức tối đa có thể nạp là 1.170.000.000đ. Số tiền nạp thực sự sẽ phụ thuộc vào tỷ giá của đồng coin tại thời điểm mà 383Sports đã cập nhật. Nếu bạn đồng ý, bạn sẽ gửi đồng coin bạn muốn tới địa chỉ tương ứng của 383Sports Casino.
+                    </p>
+                    
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-15.png" alt="">
+                        </div>
+
+                    </div>
+                    <p>Chúng tôi sẽ lấy ví dụ về Bitcoin (BTC). Một lưu ý quan trọng đối với đồng coin này là bạn chỉ được gửi Bitcoin qua mạng BTC đến địa chỉ ký gửi của 383Sports. Nếu có bất kì mạng nào khác gửi đến địa chỉ này thì có thể dẫn đến mất tiền gửi. Sau đó, bạn hãy sao chép địa chỉ của 383Sports và tiến hành gửi BTC của mình qua địa chỉ ký gửi của 383Sports số tiền mà mình muốn nạp.</p>
+
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-16.png" alt="">
+                        </div>
+
+                    </div>
+                    <p>Ứng với mỗi đồng coin nhất định sẽ có hướng dẫn chi tiết, nếu có bất kì khó khăn nào, bạn có thể liên hệ đội ngũ chăm sóc khách hàng của 383Sports Casino để được hỗ trợ kịp thời nhé!</p>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Các hình thức nạp tiền 383Sports Casino khác</h2>
+
+                    <p>Ngoài những hình thức phổ biến được liệt kê sẵn ở trên, 383Sports Casino còn rất nhiều hình thức khác mà bạn có thể áp dụng. Tuy nhiên, hãy sử dụng những cách này dưới sự hướng dẫn của bộ phận chăm sóc khách hàng tại 383Sports. Bởi những hình thức ở trên là các hình thức phổ biến nhất mà người chơi thường sử dụng và có thể tự thao tác thực hiện mà không cần sự hỗ trợ nhiều từ phía 383Sports.
+                    </p>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Làm thế nào để nạp số tiền lớn trên 383Sports Casino
+                    </h2>
+
+                    <p>Như bạn có thể thấy, trong mỗi hình thức thanh toán, 383Sports có để chi tiết về mức tối thiểu và tối đa có thể nạp. Ứng với mỗi hình thức khác nhau sẽ lại có mức nạp tối đa khác nhau. Vì vậy, nếu bạn muốn nạp số tiền lớn tại 383Sports, chúng tôi đề xuất bạn sử dụng hình thức nạp là tiền điện tử. Lúc này, mức tối đa mà bạn có thể nạp là 1.170.000.000đ. Trường hợp bạn muốn nạp số tiền lớn hơn, bạn có thể nạp nhiều lần hoặc liên hệ bộ phận chăm sóc khách hàng để được hỗ trợ kịp thời.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-17.png" alt="">
+                        </div>
+                        <div class="txt flex justify-center">
+                            <span><i>Nạp số tiền lớn với tiền điện tử</i></span>
+                        </div>
+                    </div>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Phải làm gì nếu bạn không thể nạp tiền 383Sports Casino
+                    </h2>
+
+                    <p>Không ai có thể đảm bảo 100% người dùng có thể sử dụng mọi tính năng trên nền tảng một cách trơn tru. Đôi khi bạn có thể gặp phải vấn đề khi cố gắng gửi tiền vào tài khoản của mình tại 383Sports Casino. Để giải quyết, trước tiên, bạn cần phải tìm hiểu nguyên nhân của vấn đề này. Có thể có nhiều lý do khác nhau, nhưng phổ biến nhất là do hạn chế của phương thức thanh toán mà bạn đang sử dụng. 383Sports Casino chấp nhận nhiều phương thức thanh toán khác nhau, bao gồm thẻ tín dụng, ví điện tử và ngân hàng trực tuyến. Tuy nhiên, nếu phương thức thanh toán của bạn bị từ chối hoặc không hỗ trợ tại Casino 383Sports, bạn sẽ không thể gửi tiền vào tài khoản của mình.
+                    </p>
+                    <p>Nếu bạn gặp phải vấn đề không thể gửi tiền vào tài khoản của mình tại Casino 383Sports, không cần quá lo lắng. Có một số cách để giải quyết vấn đề này. Đầu tiên, bạn nên liên hệ với đội ngũ hỗ trợ khách hàng của Casino 383Sports để tìm hiểu về phương thức thanh toán có sẵn và được hỗ trợ. Nếu vấn đề của bạn không thể giải quyết được, bạn có thể thử sử dụng một phương thức thanh toán khác để gửi tiền vào tài khoản của mình.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-17.png" alt="">
+                        </div>
+                        <div class="txt flex justify-center">
+                            <span><i>Nạp số tiền lớn với tiền điện tử</i></span>
+                        </div>
+                    </div>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Những điều cần lưu ý khi nạp tiền trên casino trực tuyến</h2>
+                    <p>Hiện nay, các Casino trực tuyến có nhiều phương thức nạp tiền khác nhau như chuyển khoản ngân hàng, thẻ tín dụng, ví điện tử, thẻ cào điện thoại,… Bạn nên xem xét kỹ càng và chọn phương thức nạp tiền an toàn, tiện lợi và phù hợp với tài khoản của mình. Dưới đây là một số lưu ý bạn cần nắm bắt.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Mức phí và thời gian xử lý</h2>
+                    <p>Khi nạp tiền trên Casino trực tuyến, bạn cần lưu ý đến mức phí và thời gian xử lý của từng phương thức nạp tiền. Một số phương thức nạp tiền có thể mất thời gian xử lý lâu hơn và có mức phí cao hơn so với những phương thức khác. Bạn nên tham khảo kỹ thông tin của từng phương thức trước khi quyết định nạp tiền.</p>
+
+                   
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Chọn Casino đáng tin cậy
+                    </h2>
+                    <p>Cuối cùng, khi nạp tiền trên Casino trực tuyến, bạn cần lựa chọn Casino đáng tin cậy để đảm bảo an toàn cho tiền của mình. Bạn nên tìm hiểu kỹ thông tin về Casino trực tuyến trước khi đăng ký và nạp tiền. Nên chọn những Casino có uy tín, đảm bảo bảo mật thông tin và tiền tệ cho khách hàng.</p>
+                    
+                    <p>Vấn đề quan trọng hơn cả là sòng bạc trực tuyến phải có giấy phép hoạt động từ các đơn vị có thẩm quyền.
+
+                    </p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-17.png" alt="">
+                        </div>
+                        <div class="txt flex justify-center">
+                            <span><i>383Sports Casino là sòng bạc online uy tín với nhiều ưu đãi và game hấp dẫn</i></span>
+                        </div>
+                    </div>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Quyền lợi khi nạp tiền 383Sports Casino</h2>
+                    <p>383Sports chỉ hoạt động với các hệ thống thanh toán đáng tin cậy, vì vậy người dùng có thể chắc chắn về sự an toàn của các khoản thanh toán của họ. Các giao dịch tài chính được xử lý ngay lập tức, đảm bảo:</p>
+                    <div class="list-inside">
+                        <li>Có tiền vào tài khoản trong vòng vài giây;</li>
+                        <li>Không chi tiêu không cần thiết do biến động tỷ giá hối đoái;
+                        </li>
+                        <li>Truy cập vào các tùy chọn trả tiền ngay sau khi hoàn thành giao dịch.</li>
+                        <li>Nếu bạn gặp phải sự chậm trễ trong khoảng thời gian hơn 1 giờ, vui lòng liên hệ với các nhà điều hành hỗ trợ để được trợ giúp.</li>
+                    </div>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-20.png" alt="">
+                        </div>
+                        <div class="txt flex justify-center">
+                            <span><i>Hàng loạt game hấp dẫn đang chờ bạn khám phá sau khi nạp tiền</i></span>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-[22px] md:text-2xl font-medium">Câu hỏi thường gặp khi nạp tiền 383Sports Casino
+                    </h2>
+                    <p>Dưới đây là các câu hỏi phổ biến mà người chơi quan tâm khi được hỏi về vấn đề nạp tiền 383Sports Casino.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">383Sports Casino có những phương thức nạp tiền nào?</h2>
+                    <p>383Sports Casino cung cấp cho người chơi nhiều phương thức nạp tiền như: thẻ Visa, MasterCard, chuyển khoản ngân hàng, nạp tiền thông qua ví MoMo, nạp tiền bằng tiền điện tử như: Bitcoin, Ethereum, USDT,…</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Cách nạp tiền vào 383Sports Casino</h2>
+                    <p>383Sports Casino rất dễ dàng để nạp tiền. Chỉ cần một vài thao tác đơn giản, bạn có thể nạp tiền và trải nghiệp thế giới Casino trược tuyến ngay lập tức. Sau khi đăng nhập vào tài khoản của bạn, bạn chỉ cần chọn phương thức nạp tiền và làm theo hướng dẫn trên màn hình.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/deposit-methods-20.png" alt="">
+                        </div>
+                        <div class="txt flex justify-center">
+                            <span><i>Hàng loạt game hấp dẫn đang chờ bạn khám phá sau khi nạp tiền</i></span>
+                        </div>
+                    </div>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Tôi có thể nạp tiền bao nhiêu lần trong ngày?</h2>
+                    <p>Bạn có thể nạp tiền nhiều lần trong ngày, tuy nhiên, hãy lưu ý rằng một số phương thức nạp tiền có giới hạn số tiền trong một giao dịch..</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Phí khi nạp tiền vào 383Sports Casino</h2>
+                    <p>383Sports Casino không tính phí nạp tiền vào tài khoản của người chơi. Tuy nhiên, các nhà cung cấp dịch vụ thanh toán có thể tính phí khác nhau, tùy thuộc vào phương thức thanh toán mà bạn chọn. Vì vậy, trước khi nạp tiền vào tài khoản của mình, bạn nên kiểm tra kỹ các khoản phí liên quan đến phương thức thanh toán của mình.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--foooter -->
+    <footer class="from-black to-sky-800 bg-gradient-to-b text-white ">
+        <div class="container flex justify-center items-center">
+            <div class="p-2 ">
+                <div class="mt-10 mb-10  grid grid-cols-2 md:grid-cols-3 gap-12 justify-center items-center">
+                    <div class="logo flex justify-center items-center">
+                        <img src="./images/383sports-tet.png" alt="">
+                    </div>
+                    <div class="img-icon flex justify-center items-center">
+                        <img src="./images/Screenshot 2024-06-13 162004.png" alt="">
+                    </div>
+                    <div class=" space-x-2 text-[18px] flex justify-center items-center">
+                        <div class="icon f">
+                            <img src="./images/vi.png" alt="" class="sm:w-12 w-28">
+                        </div>
+                        <div class="">
+                            <span>Tiếngviệt</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center border-b items-center">
+                    <span class="text-2xl">Categories</span>
+                    <span></span>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 cursor-pointer gap-8 justify-center  mx-auto ">
+                    <div class="w-full flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Đăng-nhập-vào-Casino-383Sport.html"
+                                        class="hover:text-blue-400 ">Đăng nhập vào Casino
+                                        383Sports</a></li>
+                                <li class="hover:border-b"><a href="./Phương-thức-rút-tiền.html"
+                                        class="hover:text-blue-400 ">Phương thức rút tiền </a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Sòng-bạc-trực-tiếp.html"
+                                        class="hover:text-blue-400 ">Sòng bạc trực tiếp</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Blackjack.html"
+                                        class="hover:text-blue-400 ">Blackjack</a></li>
+                                <li class="hover:border-b"><a href="./Poker.html" class="hover:text-blue-400 ">Poker</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--col2-->
+                    <div class="col2 flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Đăng-ký-tại-sòng-bạc-383Sports.html"
+                                        class="hover:text-blue-400 ">
+                                        Đăng ký tại sòng bạc 383Sports</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Ứng-dụng-di-động-383Sports.html"
+                                        class="hover:text-blue-400 ">Ứng dụng di động 383Sports</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Trò-chơi-trên-bàn.html"
+                                        class="hover:text-blue-400 ">Trò chơi trên bàn</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Roulette.html"
+                                        class="hover:text-blue-400 ">Roulette</a></li>
+                                <li class="hover:border-b"><a href="./Jackpot.html"
+                                        class="hover:text-blue-400 ">Jackpot</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--col3-->
+                    <div class="col3 flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Tiền-thưởng-383Sports-Casino.html"
+                                        class="hover:text-blue-400 ">
+                                        Tiền thưởng 383Sports Casino</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Phương-thức-nạp-tiền.html"
+                                        class="hover:text-blue-400 ">Phương thức nạp tiền</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Cá-cược-thể-thao.html"
+                                        class="hover:text-blue-400 ">Cá cược thể thao</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Baccarat.html"
+                                        class="hover:text-blue-400 ">Baccarat</a></li>
+                                <li class="hover:border-b"><a href="./Lottery.html"
+                                        class="hover:text-blue-400 ">Lottery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!--backtop-->
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

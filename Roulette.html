@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--tailwindcss-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- font awesome..! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!--style css-->
+    <link rel="stylesheet" href="./style.css">
+    <!--icon-->
+    <title>383Sports | Sòng Bạc Đáng Tin Cậy Việt Nam 2022</title>
+</head>
+
+<style>
+    .active {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <!--backtop-->
+    <a href="" class="back"></a>
+
+
+
+    <header class=" from-gray-900 to-gray-600 bg-gradient-to-r text-white">
+        <nav class=" relative mx-auto">
+            <div class="container flex justify-between items-center space-x-2 px-4 py-2">
+                <button id="mobile-icon" class="sm:hidden border h-8 w-14 rounded-lg text-white">
+                    <i onclick="changeIcon(this)" class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="flex max-sm:justify-center cursor-pointer space-x-4 items-center  w-full">
+                    <div class="logo">
+                        <a href="./homepage.html"><img src="./images/383sports-tet.png" alt="" class="w-[120px]"></a>
+                    </div>
+                    <div class="login hidden sm:block">
+                        <ul class="flex justify-center items-center space-x-4">
+                            <li class=""><a onclick=url() class="hover:no-underline">Đăng nhập</a></li>
+                            <li class="bg-orange-600 py-1 px-4 rounded-full hover:opacity-90"><a onclick=url()
+                                    class="hover:no-underline">Đăng ký</a></li>
+                        </ul>
+                    </div>
+                    <div class="sm:block hidden">
+                        <img src="./images/app.png" alt="" class="w-10  ">
+                    </div>
+                </div>
+                <div class=" flex space-x-2 items-center text-[18px]">
+                    <div class="icon f">
+                        <img src="./images/vi.png" alt="" class="sm:w-12 w-28">
+                    </div>
+                    <div class="">
+                        <span>Tiếngviệt</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--mobile-menu-->
+            <div id="mobile-menu"
+                class="mobile-menu absolute h-screen top-[70px] left-[-100%] transition-all duration-500 w-full flex justify-center  p-4 bg-slate-900  space-y-4 font-medium text-[18px]">
+                <div class="cursor-pointer">
+
+                    <div class="login">
+                        <ul class="flex items-center space-x-4">
+                            <li><a onclick=url() class="hover:no-underline">Đăng nhập</a></li>
+                            <li class="bg-orange-600 py-1 px-4 rounded-full hover:opacity-90"><a onclick=url()
+                                    class="hover:no-underline">Đăng ký</a></li>
+                        </ul>
+                    </div>
+                    <div class="app *:flex *:items-center mt-10 *:font-normal">
+                        <h1>App - <img src="./images/app.png" alt="" class="w-8"></h1>
+                    </div>
+                    <div class="menu mt-10 ">
+                        <ul class="space-y-6">
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Đăng nhập vào Casino
+                                    383Sports</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Tiền thưởng 383Sports
+                                    Casino</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Phương thức rút tiền </a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Ứng dụng di động
+                                    383Sports</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Phương thức nạp tiền</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Sòng bạc trực tiếp</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Trò chơi trên bàn</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Cá cược thể thao</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Blackjack</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Roulette</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Baccarat</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Poker</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Jackpot</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Lottery</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <section class="bg-[url(https://bons.social/wp-content/themes/bons-social/assets/images/carousel-bg.jpeg)] ">
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                        
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="relative grid grid-cols-1 flex-col-reverse md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">Các khe chơi game tốt nhất! Chơi và
+                                    giành chiến thắng!
+                                </h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl ">Quay các khe</button>
+                                </div>
+
+                            </div>
+                            <duv class="img w-96 flex justify-center">
+                                <img src="./images/main-banner-slot.png" class="d-block w-full text-center" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1  md:grid-cols-2  text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">Niềm vui khó quên khi chơi với người
+                                    chia bài trực tiếp
+                                    từ 383Sports!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Chơi với người chia
+                                        bài</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-live-dealer.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1 md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">
+                                    Nhận phần thưởng lớn từ 383Sports Casino!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Yêu cầu tiền thưởng của
+                                        bạn</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-bonus.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1 md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">
+                                    Nhận phần thưởng lớn từ 383Sports Casino!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Yêu cầu tiền thưởng của
+                                        bạn</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-betting.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="from-slate-700 to-zinc-800 bg-gradient-to-b p-2">
+        <div class="container mb-10">
+            <div class="text text-white">
+                <div class="*:mt-4">
+                    <span class="font-serif"><b>383sport </b>> Roulette
+                    </span>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Roulette</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">TTìm hiểu chi tiết về Roulette tại 383Sports Casino</h2>
+                    <p>383Sports Casino là một sòng bạc trực tuyến phổ biến trên thế giới. 383Sports sở hữu nhiều trò chơi đa
+                        dạng, bao gồm cả Roulette – một trò chơi được yêu thích bởi nhiều người chơi. Trong bài viết
+                        này, chúng ta sẽ tìm hiểu về Roulette trong 383Sports Casino là gì và cách chơi trò chơi này nhé!</p>
+
+                </div>
+
+
+                <div class="*:mt-4 p-2">
+
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="" alt="">
+                        </div>
+                        <div class="txt  flex justify-center items-center">
+                            <p><i>Giao diện các trò chơi Roulette tại 383Sports Casino</i></p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Roulette trong 383Sports Casino là gì?</h2>
+                    <p>Roulette là một trò chơi được yêu thích tại 383Sports Casino. Roulette sẽ gồm các ô số với màu sắc
+                        khác nhau. Đồng thời sẽ có một bánh quay và một quả bóng. Người chơi sẽ đặt cược vào ô số tùy ý.
+                        Sau đó, quả bóng được lắc và quay trong bánh xe quay. Khi quả bóng dừng tại số mà người chơi đặt
+                        cược, điều đó có nghĩa là người chơi chiến thắng.</p>
+                    <p>Ở 383Sports Casino, có nhiều phiên bản khác nhau của Roulette được cung cấp. Bạn có thể chơi American
+                        Roulette, European Roulette, French Roulette. Mỗi phiên bản có những quy tắc và cách chơi khác
+                        nhau. Để tăng phần thích thú, bạn có thể chơi Roulette trực tuyến tại 383Sports.</p>
+
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/roulette-2.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Cách mà Roulette hoạt động trên 383Sports Casino
+                    </h2>
+                    <p>Để tham gia chơi Roulette tại 383Sports. Bạn chỉ việc đăng ký tài khoản, đăng nhập vào website. Sau đó
+                        nạp tiền vào tài khoản và nhập cuộc với những phiên bản Roulette cuốn hút. Hãy nhập từ khóa
+                        “Roulette” tại mục tìm kiếm trò chơi. Bạn sẽ nhận về rất nhiều kết quả về trò chơi Roulette của
+                        chúng ta.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/roulette-3.png" alt="">
+                        </div>
+                        <div class="txt  flex justify-center items-center">
+                            <p><i>Nhập từ khóa “Roulette” tại mục tìm kiếm trò chơi</i></p>
+                        </div>
+                    </div>
+                    <p>Trong mỗi trò chơi đã để sẵn nguyên tắc và cách chơi, bạn chỉ việc bấm vào các tùy chọn hiển thị
+                        trên màn hình để đọc hiểu rõ hơn trước khi bắt đầu.</p>
+                    <p>Tiền thưởng của người chơi phụ thuộc vào số tiền họ đặt cược và kết quả của ván chơi. Nếu người
+                        chơi đặt cược vào một số cụ thể và số đó là kết quả của ván chơi, họ sẽ nhận được tiền thưởng
+                        lớn. Nếu người chơi đặt cược vào một nhóm số hoặc màu sắc và kết quả của ván chơi trùng với lựa
+                        chọn của họ, họ sẽ nhận được một khoản tiền thưởng nhỏ hơn.</p>
+                    <p>Trên 383Sports Casino, tỷ lệ thanh toán được quy định bởi các quy tắc Roulette chuẩn. Người chơi có
+                        thể kiểm tra bảng thanh toán trên trang web để biết chi tiết về tỷ lệ thanh toán của từng loại
+                        cược.</p>
+
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/roulette-4.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Tại sao không có gian lận trong Roulette ở 383Sports
+                        Casino?
+                    </h2>
+
+                    <p>Tỷ lệ thắng trong Roulette phụ thuộc vào loại cược được đặt và được xác định bởi xác suất quả
+                        bóng rơi vào một ô cụ thể.</p>
+                    <p>Tại Sòng bạc 383Sports, các trò chơi Roulette được cung cấp bởi các trình tạo số ngẫu nhiên (RNG).
+                        Điều này có nghĩa là kết quả của mỗi lần quay là hoàn toàn ngẫu nhiên và không thể dự đoán hoặc
+                        thao túng. Các RNG được sử dụng tại 383Sports Casino thường xuyên được kiểm tra bởi các công ty bên
+                        thứ ba để đảm bảo rằng chúng công bằng và không thiên vị.</p>
+                    <p>Ngoài việc sử dụng RNG, 383Sports Casino đã triển khai nhiều biện pháp bảo mật khác nhau để ngăn chặn
+                        gian lận và đảm bảo chơi công bằng. Ví dụ: 383Sports sử dụng mã hóa SSL để bảo vệ thông tin cá nhân
+                        và tài chính của người chơi, đồng thời có các quy trình xác minh nghiêm ngặt để ngăn chặn gian
+                        lận.</p>
+                    <p>Cuối cùng, 383Sports được cấp phép và quản lý bởi các cơ quan có uy tín, đồng thời có thành tích cung
+                        cấp trải nghiệm chơi trò chơi an toàn và đáng tin cậy cho người chơi của mình.</p>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">383Sports Casino có hợp pháp hay không?</h2>
+
+                    <p>383Sports Casino được quản lý bởi công ty Araxio Development N.V. và được cấp phép bởi chính phủ
+                        Curaçao. Điều này có nghĩa là sòng bạc này hoạt động hợp pháp và tuân thủ các quy định và điều
+                        kiện được đặt ra bởi tổ chức quản lý Curaçao eGaming. Các quy định và điều kiện này được thiết
+                        lập để bảo vệ người chơi khỏi các hoạt động gian lận và đảm bảo sự an toàn và minh bạch trong
+                        các trò chơi.</p>
+
+                    <p>383Sports Casino sử dụng các công nghệ bảo mật tiên tiến để bảo vệ thông tin cá nhân và tài khoản của
+                        người chơi. Họ sử dụng mã hóa SSL để đảm bảo rằng thông tin cá nhân của người chơi được bảo vệ
+                        và không bị lộ ra bên ngoài. Ngoài ra, 383Sports Casino cũng có chính sách bảo mật nghiêm ngặt và cam
+                        kết không chia sẻ thông tin cá nhân của người chơi với bên thứ ba.</p>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Tính năng mà Roulette sở hữu trên 383Sports Casino</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Giao diện đẹp mắt và thân thiện với người dùng</h2>
+
+                    <p>Trò chơi Roulette trên 383Sports Casino được thiết kế với giao diện đẹp mắt và thân thiện với người
+                        dùng. Các nút chức năng được đặt ở vị trí dễ dàng để người chơi có thể dễ dàng tương tác và điều
+                        khiển trò chơi.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Các phiên chơi được tổ chức liên tục</h2>
+
+                    <p>Trò chơi Roulette trên 383Sports Casino được tổ chức liên tục, người chơi có thể tham gia vào bất kỳ
+                        lúc nào trong ngày. Bên cạnh đó, sòng bạc cũng cung cấp nhiều phiên chơi khác nhau với các mức
+                        cược khác nhau để người chơi có thể chọn lựa phù hợp với túi tiền của mình.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Hệ thống thanh toán nhanh chóng và an toàn</h2>
+
+                    <p>383Sports Casino sử dụng hệ thống thanh toán an toàn và nhanh chóng để đảm bảo cho người chơi có trải
+                        nghiệm tốt nhất. Người chơi có thể chọn nhiều phương thức thanh toán khác nhau để nạp tiền và
+                        rút tiền một cách dễ dàng.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Chiến thuật chỉ dành cho người chơi Roulette tại
+                        383Sports Casino</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Chiến thuật Martingale</h2>
+
+                    <p>Chiến thuật Martingale là một trong những chiến thuật phổ biến nhất khi chơi Roulette. Cách chơi
+                        của chiến thuật này rất đơn giản: bạn đặt cược vào một màu (đỏ hoặc đen) hoặc một số chẵn/lẻ.
+                        Nếu bạn thua, bạn sẽ đặt cược gấp đôi số tiền đã đặt trước đó. Nếu bạn thắng, bạn sẽ đặt cược
+                        bằng số tiền ban đầu. Tuy nhiên, bạn cần phải chú ý đến giới hạn cược tối đa của 383Sports Casino và
+                        tài khoản của bạn.</p>
+                    Roulette tại 383Sports Casino</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Chiến thuật dựa trên sơ đồ Fibonacci</h2>
+
+                    <p>Chiến thuật Fibonacci dựa trên một sơ đồ cổ điển được sử dụng trong toán học. Bạn bắt đầu với một
+                        số tiền cố định và đặt cược vào một số chẵn/lẻ hoặc màu. Nếu bạn thua, bạn sẽ đặt cược theo
+                        chuỗi số Fibonacci (1, 1, 2, 3, 5, 8…). Nếu bạn thắng, bạn sẽ quay lại cược ban đầu của mình.
+                        Tuy nhiên, để sử dụng chiến thuật này hiệu quả, bạn cần phải biết cách tính chuỗi số Fibonacci.
+                    </p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Chiến thuật dựa trên lý thuyết xác suất</h2>
+
+                    <p>Lý thuyết xác suất là một trong những cách tốt nhất để tăng cơ hội thắng của bạn trong Roulette.
+                        Bạn cần phải cân nhắc xem cược vào một số cụ thể hay một nhóm số như thế nào để tối đa hóa cơ
+                        hội thắng của mình. Hãy nhớ rằng mỗi số trong Roulette có cùng cơ hội ra mắt, vì vậy không có
+                        chiến thuật nào có thể đảm bảo chiến thắng 100%.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Tổng hợp các quy tắc đặc biệt trong Roulette nhất
+                        định bạn phải biết</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Quy tắc La Partage</h2>
+
+                    <p>Quy tắc La Partage là một quy tắc đặc biệt áp dụng cho phiên bản Roulette Châu Âu. Nó nói rằng
+                        nếu quả bóng rơi xuống số 0, tất cả các cược bằng tiền chẵn (chẳng hạn như đỏ/đen hoặc lẻ/chẵn)
+                        sẽ nhận lại một nửa số tiền đặt cược ban đầu của họ. Điều này có nghĩa là tỷ lệ lợi nhuận của
+                        nhà cái giảm từ 2,7% xuống 1,35%. Điều quan trọng cần lưu ý là quy tắc này không áp dụng cho
+                        phiên bản Roulette của Mỹ. </p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Quy tắc trong tù (En Prison)
+                    </h2>
+
+                    <p>Quy tắc En Prison là một quy tắc đặc biệt khác áp dụng cho phiên bản Roulette Châu Âu. Nó hoạt
+                        động theo cách tương tự như quy tắc La Partage, nhưng thay vì trả lại một nửa số tiền đặt cược
+                        ban đầu, số tiền đặt cược sẽ bị “bỏ tù”. Điều này có nghĩa là cược vẫn còn trên bàn cho lần quay
+                        tiếp theo. Nếu cược thắng trong lần quay tiếp theo, người chơi sẽ nhận lại tiền cược ban đầu.
+                        Nếu thua, cược bị hủy. Quy tắc này cũng làm giảm tỷ lệ lợi nhuận của nhà cái xuống còn 1,35%.
+                    </p>
+
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Cược cuộc gọi (Call Bets)
+                    </h2>
+
+                    <p>Cược cuộc gọi là một loại cược đặc biệt thường được sử dụng trong Roulette Pháp. Chúng được đặt
+                        bằng cách thông báo chúng cho người chia bài thay vì đặt chip lên bàn. Một số cược cuộc gọi phổ
+                        biến bao gồm Voisins du Zero (láng giềng của số không), Tiers du Cylindre (một phần ba bánh xe)
+                        và Orphelins (trẻ mồ côi). Cược cuộc gọi có thể phức tạp hơn một chút so với cược thông thường,
+                        vì vậy điều quan trọng là phải hiểu chúng trước khi đặt chúng.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Đề xuất các thể loại Roulette được yêu thích tại 383Sports Casino</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">European Roulette</h2>
+
+                    <p>European Roulette là một trong những trò chơi phổ biến nhất trên 383Sports Casino. Trò chơi này có bảng đánh cược đơn giản, với các số từ 0 đến 36 và một số lựa chọn cược khác nhau như đặt cược vào màu đỏ hoặc đen, chẵn hoặc lẻ hoặc cược vào một nhóm số nhất định. European Roulette có tỷ lệ thanh toán cao và cung cấp cho người chơi cơ hội để giành chiến thắng lớn.
+
+                    </p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/roulette-5.png" alt="">
+                        </div>
+                        <div class="txt  flex justify-center items-center">
+                            <p><i>Ảnh bìa tựa game “Roulette European”</i></p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/roulette-6.png" alt="">
+                        </div>
+                        <div class="txt  flex justify-center items-center">
+                            <p><i>Ảnh giao diện tựa game “Roulette European”</i></p>
+                        </div>
+                    </div>
+                    <h2 class="text-[22px] md:text-2xl font-medium">French Roulette</h2>
+
+                    <p>French Roulette cũng là một trò chơi Roulette phổ biến trên 383Sports Casino. Trò chơi này có bảng đánh cược tương tự như European Roulette, với các số từ 0 đến 36, nhưng có một số quy tắc đặc biệt như “En Prison” và “La Partage”. Quy tắc “En Prison” cho phép người chơi giữ lại một nửa số tiền cược của họ nếu bóng rơi vào số 0, trong khi quy tắc “La Partage” cho phép họ giữ lại một nửa số tiền cược và thua một nửa số tiền cược nếu bóng rơi vào số 0. Những quy tắc này giúp tăng khả năng chiến thắng của người chơi.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/roulette-7.png" alt="">
+                        </div>
+                        <div class="txt  flex justify-center items-center">
+                            <p><i>Ảnh bìa tựa game “Roulette kiểu Pháp”</i></p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/roulette-8.png" alt="">
+                        </div>
+                        <div class="txt  flex justify-center items-center">
+                            <p><i>Ảnh giao diện tựa game “Roulette kiểu Pháp”</i></p>
+                        </div>
+                    </div>
+                    <h2 class="text-[22px] md:text-2xl font-medium">American Roulette</h2>
+
+                    <p>American Roulette là một trò chơi Roulette khác trên 383Sports Casino. Trò chơi này có bảng đánh cược tương tự như European và French Roulette, nhưng có một số khác biệt quan trọng. American Roulette có thêm số 00 trên bảng đánh cược, tăng khả năng thắng của nhà cái và giảm khả năng chiến thắng của người chơi. Tuy nhiên, American Roulette vẫn là một trò chơi đáng chơi trên 383Sports Casino, đặc biệt là nếu bạn muốn thử thách bản thân và tìm kiếm những khoảnh khắc thú vị.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/roulette-9.png" alt="">
+                        </div>
+                        <div class="txt  flex justify-center items-center">
+                            <p><i>Ảnh bìa tựa game “Roulette kiểu Mỹ”</i></p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/roulette-10.png" alt="">
+                        </div>
+                        <div class="txt  flex justify-center items-center">
+                            <p><i>Ảnh giao diện tựa game “Roulette kiểu Mỹ”</i></p>
+                        </div>
+                    </div>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Một số nhà cung cấp trò chơi Roulette tại 383Sports Casino</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Evolution Gaming</h2>
+
+                    <p>Evolution Gaming là một trong những nhà cung cấp trò chơi Roulette hàng đầu trên 383Sports Casino. Với chất lượng hình ảnh và âm thanh tuyệt vời, trò chơi Roulette của Evolution Gaming mang đến cho người chơi cảm giác như đang ngồi trong một sòng bạc trực tiếp. Bên cạnh đó, Evolution Gaming cũng cung cấp nhiều biến thể khác nhau của trò chơi Roulette, từ Roulette châu Âu đến Roulette Mỹ, đáp ứng nhu cầu của người chơi.
+
+                    </p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/roulette-11.png" alt="">
+                        </div>
+                        
+                    </div>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Pragmatic Play</h2>
+
+                    <p>Pragmatic Play cung cấp nhiều phiên bản trò chơi Roulette khác nhau, bao gồm cả trò chơi Roulette châu Âu và Roulette Mỹ. Những trò chơi này đều được thiết kế đẹp mắt với giao diện trực quan và âm thanh sống động, giúp người chơi có trải nghiệm tuyệt vời nhất.
+                    </p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/roulette-12.png" alt="">
+                        </div>
+                        
+                    </div>
+                    <h2 class="text-[22px] md:text-2xl font-medium">B Gaming</h2>
+
+                    <p>B Gaming là một nhà cung cấp trò chơi casino trực tuyến đang trên đà phát triển. Họ đã cho ra đời nhiều trò chơi Roulette độc đáo và hấp dẫn. Tại 383Sports Casino, bạn có thể chơi các phiên bản Roulette từ B Gaming như Roulette VIP, Roulette Silver, và Roulette Diamond. Mỗi phiên bản đều có đặc điểm riêng biệt và đáp ứng được sự đa dạng của người chơi.</p>
+                    <div class="">
+                        <div class="img flex justify-center items-center">
+                            <img src="./images/roulette-13.png" alt="">
+                        </div>
+                        
+                    </div>
+
+                    <h2 class="text-[22px] md:text-2xl font-medium">Một vài lưu ý khi chơi Roulette tại 383Sports Casino</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Quản lý vốn</h2>
+
+                    <p>Trong bất kỳ hoạt động nào liên quan đến tiền bạc, vấn đề quản lý vốn là rất quan trọng. Bạn cần quyết định số tiền mà bạn sẽ sử dụng để chơi và không bao giờ vượt qua ngân sách mà bạn đã đặt ra. Hãy đặt một mức giới hạn và dừng lại khi bạn đạt được mức giới hạn đó. Điều này sẽ giúp bạn tránh tình trạng mất tiền quá nhiều khi chơi Roulette tại 383Sports Casino.
+
+                    </p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Hiểu rõ luật chơi</h2>
+
+                    <p>Trước khi bắt đầu chơi Roulette tại 383Sports Casino, bạn cần hiểu rõ luật chơi của trò chơi này. Roulette là trò chơi dựa trên may mắn, tuy nhiên, nếu bạn không hiểu rõ luật chơi, bạn có thể mất tiền một cách dễ dàng. Hãy đọc kỹ các quy tắc và chính sách của 383Sports Casino để có trải nghiệm chơi Roulette tốt nhất.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Chọn một chiến lược chơi phù hợp</h2>
+
+                    <p>Chọn một chiến lược là rất quan trọng khi chơi Roulette tại 383Sports Casino. Có nhiều chiến lược khác nhau như Martingale, Fibonacci, Paroli, D’Alembert, và nhiều loại khác. Hãy tìm hiểu và lựa chọn chiến lược phù hợp với bạn. Hãy nhớ rằng không có chiến lược nào là tuyệt đối, và bạn cần tìm đúng chiến lược phù hợp với phong cách chơi của bạn.
+
+                    </p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Tóm tắt các nguyên tắc quan trọng về Roulette tại 383Sports Casino</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Nguyên tắc 1: Luật chơi</h2>
+
+                    <p>Trong Roulette, quả bóng được quay trên một chiếc bàn quay. Người chơi đặt cược vào các ô trên bàn quay. Sau đó, người chia bài sẽ quay quả bóng và đưa ra kết quả. Người chơi sẽ thắng nếu quả bóng rơi vào ô mà họ đã đặt cược. Các ô cược được chia thành hai loại: cược nội và cược ngoại. Cược nội bao gồm các con số đơn và cược ngoại bao gồm các lựa chọn như đỏ/đen hoặc chẵn/lẻ.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Nguyên tắc 2: Tỷ lệ thanh toán</h2>
+
+                    <p>Mỗi ô cược sẽ có tỷ lệ thanh toán khác nhau, điều này phụ thuộc vào khả năng thắng cuộc của ô cược đó. Các ô cược nội sẽ có tỷ lệ thanh toán cao hơn so với các ô cược ngoại. Ví dụ, nếu người chơi đặt cược vào một con số đơn, tỷ lệ thanh toán sẽ là 35 đến 1. Nếu người chơi đặt cược vào màu đỏ hoặc đen, tỷ lệ thanh toán sẽ là 1 đến 1.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Nguyên tắc 3: Chiến lược chơi</h2>
+
+                    <p>Một trong những chiến lược chơi phổ biến nhất trong Roulette là chiến lược Martingale. Theo chiến lược này, người chơi sẽ đặt cược vào một ô cược ngoại và nhân đôi số tiền đặt cược nếu thua. Nếu người chơi thắng, họ sẽ đặt cược lại với số tiền ban đầu. Tuy nhiên, người chơi nên cẩn thận với chiến lược này vì nó có thể dẫn đến tổn thất lớn nếu không thực hiện đúng cách.
+                    </p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Câu hỏi thường gặp về Roulette trên 383Sports Casino</h2>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Làm thế nào để chơi Roulette?</h2>
+                    <p>Roulette là trò chơi dựa trên may mắn, trong đó người chơi đặt cược trên một hoặc nhiều con số trên bàn Roulette. Sau đó, quả bóng sẽ được quay trong chiếc bánh xe Roulette và rơi vào một số. Nếu số đó trùng khớp với số mà người chơi đã đặt cược, thì người chơi sẽ thắng tiền.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Có bao nhiêu loại cược trong Roulette?</h2>
+                    <p>Có nhiều loại cược khác nhau trong Roulette, bao gồm cược số, cược màu đỏ/đen, cược chẵn/lẻ và cược trên một nhóm số nhất định. Mỗi loại cược có tỷ lệ thanh toán khác nhau và người chơi nên tìm hiểu và chọn loại cược phù hợp với mình.</p>
+                    <h2 class="text-[22px] md:text-2xl font-medium">Làm thế nào để tính toán tỷ lệ thanh toán trong Roulette?</h2>
+                    <p>Tỷ lệ thanh toán trong Roulette phụ thuộc vào loại cược mà người chơi đặt. Ví dụ, nếu người chơi đặt cược trên một số duy nhất và thắng, tỷ lệ thanh toán sẽ là 35 đến 1. Nếu người chơi đặt cược màu đỏ/đen và thắng, tỷ lệ thanh toán sẽ là 1 đến 1. Người chơi nên tìm hiểu tỷ lệ thanh toán trước khi đặt cược để có thể tính toán được tiền thắng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--foooter -->
+    <footer class="from-black to-sky-800 bg-gradient-to-b text-white ">
+        <div class="container flex justify-center items-center">
+            <div class="p-2 ">
+                <div class="mt-10 mb-10  grid grid-cols-2 md:grid-cols-3 gap-12 justify-center items-center">
+                    <div class="logo flex justify-center items-center">
+                        <img src="./images/383sports-tet.png" alt="">
+                    </div>
+                    <div class="img-icon flex justify-center items-center">
+                        <img src="./images/Screenshot 2024-06-13 162004.png" alt="">
+                    </div>
+                    <div class=" space-x-2 text-[18px] flex justify-center items-center">
+                        <div class="icon f">
+                            <img src="./images/vi.png" alt="" class="sm:w-12 w-28">
+                        </div>
+                        <div class="">
+                            <span>Tiếngviệt</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center border-b items-center">
+                    <span class="text-2xl">Categories</span>
+                    <span></span>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 cursor-pointer gap-8 justify-center  mx-auto ">
+                    <div class="w-full flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Đăng-nhập-vào-Casino-383Sport.html"
+                                        class="hover:text-blue-400 ">Đăng nhập vào Casino
+                                        383Sports</a></li>
+                                <li class="hover:border-b"><a href="./Phương-thức-rút-tiền.html"
+                                        class="hover:text-blue-400 ">Phương thức rút tiền </a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Sòng-bạc-trực-tiếp.html"
+                                        class="hover:text-blue-400 ">Sòng bạc trực tiếp</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Blackjack.html"
+                                        class="hover:text-blue-400 ">Blackjack</a></li>
+                                <li class="hover:border-b"><a href="./Poker.html" class="hover:text-blue-400 ">Poker</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--col2-->
+                    <div class="col2 flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Đăng-ký-tại-sòng-bạc-383Sports.html"
+                                        class="hover:text-blue-400 ">
+                                        Đăng ký tại sòng bạc 383Sports</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Ứng-dụng-di-động-383Sports.html"
+                                        class="hover:text-blue-400 ">Ứng dụng di động 383Sports</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Trò-chơi-trên-bàn.html"
+                                        class="hover:text-blue-400 ">Trò chơi trên bàn</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Roulette.html"
+                                        class="hover:text-blue-400 ">Roulette</a></li>
+                                <li class="hover:border-b"><a href="./Jackpot.html"
+                                        class="hover:text-blue-400 ">Jackpot</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--col3-->
+                    <div class="col3 flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Tiền-thưởng-383Sports-Casino.html"
+                                        class="hover:text-blue-400 ">
+                                        Tiền thưởng 383Sports Casino</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Phương-thức-nạp-tiền.html"
+                                        class="hover:text-blue-400 ">Phương thức nạp tiền</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Cá-cược-thể-thao.html"
+                                        class="hover:text-blue-400 ">Cá cược thể thao</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Baccarat.html"
+                                        class="hover:text-blue-400 ">Baccarat</a></li>
+                                <li class="hover:border-b"><a href="./Lottery.html"
+                                        class="hover:text-blue-400 ">Lottery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!--backtop-->
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

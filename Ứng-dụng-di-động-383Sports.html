@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--tailwindcss-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- font awesome..! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!--style css-->
+    <link rel="stylesheet" href="./style.css">
+    <!--icon-->
+    <title>383Sports | Sòng Bạc Đáng Tin Cậy Việt Nam 2022</title>
+</head>
+
+<style>
+    .active {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <!--backtop-->
+    <a href="" class="back"></a>
+
+
+
+    <header class=" from-gray-900 to-gray-600 bg-gradient-to-r text-white">
+        <nav class=" relative mx-auto">
+            <div class="container flex justify-between items-center space-x-2 px-4 py-2">
+                <button id="mobile-icon" class="sm:hidden border h-8 w-14 rounded-lg text-white">
+                    <i onclick="changeIcon(this)" class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="flex max-sm:justify-center cursor-pointer space-x-4 items-center  w-full">
+                    <div class="logo">
+                        <a href="./homepage.html"><img src="./images/383sports-tet.png" alt="" class="w-[120px]"></a>
+                    </div>
+                    <div class="login hidden sm:block">
+                        <ul class="flex justify-center items-center space-x-4">
+                            <li class=""><a onclick=url() class="hover:no-underline">Đăng nhập</a></li>
+                            <li class="bg-orange-600 py-1 px-4 rounded-full hover:opacity-90"><a onclick=url()
+                                    class="hover:no-underline">Đăng ký</a></li>
+                        </ul>
+                    </div>
+                    <div class="sm:block hidden">
+                        <img src="./images/app.png" alt="" class="w-10  ">
+                    </div>
+                </div>
+                <div class=" flex space-x-2 items-center text-[18px]">
+                    <div class="icon f">
+                        <img src="./images/vi.png" alt="" class="sm:w-12 w-28">
+                    </div>
+                    <div class="">
+                        <span>Tiếngviệt</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--mobile-menu-->
+            <div id="mobile-menu"
+                class="mobile-menu absolute h-screen top-[70px] left-[-100%] transition-all duration-500 w-full flex justify-center  p-4 bg-slate-900  space-y-4 font-medium text-[18px]">
+                <div class="cursor-pointer">
+
+                    <div class="login">
+                        <ul class="flex items-center space-x-4">
+                            <li><a onclick=url() class="hover:no-underline">Đăng nhập</a></li>
+                            <li class="bg-orange-600 py-1 px-4 rounded-full hover:opacity-90"><a onclick=url()
+                                    class="hover:no-underline">Đăng ký</a></li>
+                        </ul>
+                    </div>
+                    <div class="app *:flex *:items-center mt-10 *:font-normal">
+                        <h1>App - <img src="./images/app.png" alt="" class="w-8"></h1>
+                    </div>
+                    <div class="menu mt-10 ">
+                        <ul class="space-y-6">
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Đăng nhập vào Casino
+                                    383Sports</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Tiền thưởng 383Sports
+                                    Casino</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Phương thức rút tiền </a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Ứng dụng di động
+                                    383Sports</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Phương thức nạp tiền</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Sòng bạc trực tiếp</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Trò chơi trên bàn</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Cá cược thể thao</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Blackjack</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Roulette</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Baccarat</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Poker</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Jackpot</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Lottery</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <section class="bg-[url(https://bons.social/wp-content/themes/bons-social/assets/images/carousel-bg.jpeg)] ">
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                        
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="relative grid grid-cols-1 flex-col-reverse md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">Các khe chơi game tốt nhất! Chơi và
+                                    giành chiến thắng!
+                                </h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl ">Quay các khe</button>
+                                </div>
+
+                            </div>
+                            <duv class="img w-96 flex justify-center">
+                                <img src="./images/main-banner-slot.png" class="d-block w-full text-center" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1  md:grid-cols-2  text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">Niềm vui khó quên khi chơi với người
+                                    chia bài trực tiếp
+                                    từ 383Sports!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Chơi với người chia
+                                        bài</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-live-dealer.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1 md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">
+                                    Nhận phần thưởng lớn từ 383Sports Casino!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Yêu cầu tiền thưởng của
+                                        bạn</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-bonus.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1 md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">
+                                    Nhận phần thưởng lớn từ 383Sports Casino!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Yêu cầu tiền thưởng của
+                                        bạn</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-betting.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="from-slate-700 to-zinc-800 bg-gradient-to-b p-2">
+        <div class="container mb-10">
+            <div class="text text-white">
+                <div class="*:mt-4">
+                    <span class="font-serif"><b>383sport </b>> Ứng dụng di động 383Sports</span>
+                    <h2 class="text-[22px] md:text-3xl font-medium">Ứng dụng di động 383Sports</h2>
+                    <p>Đến sòng bạc trực tuyến 383Sports, cho dù bạn đang sử dụng điện thoại thông minh, máy tính hay máy
+                        tính xách tay, miễn là bạn có kết nối internet, bạn có thể kết nối với sòng bạc 383Sports mọi lúc,
+                        mọi nơi!
+
+                        Bài viết dưới đây sẽ hướng dẫn bạn cách bắt đầu tham gia thế giới trực tuyến của sòng bạc 383Sports
+                        cũng như cách tải ứng dụng sòng bạc 383Sports.</p>
+
+                </div>
+
+
+                <div class="*:mt-4 p-2">
+
+                    <h1 class="text-[20px] md:text-2xl font-medium">Về cách tải 383Sports Casino
+                    </h1>
+                    <p>Chúng tôi sẽ cho bạn biết cách cài đặt ứng dụng đúng cách trên điện thoại của bạn.</p>
+
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Máy tính, máy tính xách tay
+                    </h2>
+                    <div class="">
+                        <p>Nếu bạn đang sử dụng máy tính hoặc máy tính xách tay, bạn không cần cài đặt phần mềm của sòng
+                            bạc 383Sports.</p>
+                        <p>Chỉ cần mở trình duyệt của bạn, tìm kiếm 383Sports.com và kết nối đến trang web để bắt đầu chơi
+                            trực tuyến.</p>
+                        <div class="list">
+                            <li>Điện thoại, máy tính bảng</li>
+                            <li>Hệ điều hành Android</li>
+                        </div>
+                        <div class="list-decimal p-2">
+                            <li>Mở trang web chính thức của sòng bạc 383Sports trong trình duyệt của bạn.</li>
+                            <li>Nhấp vào biểu tượng menu ở góc dưới bên phải.</li>
+                            <li>Nhấp vào tùy chọn thứ hai “Android APK”.</li>
+                            <li>Nhấp vào “Tải xuống” và cài đặt ứng dụng 383Sports trên thiết bị Android của bạn.</li>
+                            <li>Trong cài đặt, chấp nhận tùy chọn “Nguồn không xác định”.</li>
+                            <li>Sau khi cài đặt xong, bạn có thể mở ứng dụng 383Sports.</li>
+                            <li>Nếu hệ thống thông báo có cho phép sử dụng dữ liệu hay không, hãy nhấn cho phép.</li>
+                        </div>
+                    </div>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Apple, hệ điều hành iOS</h2>
+
+
+                    <div class="list-decimal p-2">
+                        <li>Vì không có ứng dụng 383Sports trên App Store của Apple, nên cần thực hiện các bước khác để cài
+                            đặt. Các bước cài đặt như sau:</li>
+                        <li>Mở trình duyệt Safari và kết nối đến trang web chính thức của sòng bạc 383Sports.</li>
+                        <li>Nhấp vào biểu tượng chia sẻ ở giữa dưới trình duyệt.</li>
+                        <li>Tiếp theo, chọn “Thêm vào màn hình chính”.</li>
+                        <li>Cuối cùng, nhấp vào “Thêm” ở góc trên bên phải.</li>
+                    </div>
+
+
+
+
+                    <h2 class="text-[20px] md:text-xl font-medium">Cách đăng ký sòng bạc 383Sports (hướng dẫn từng bước)</h2>
+
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Máy tính, máy tính xách tay
+                    </h2>
+
+
+                    <div class="list-decimal p-2">
+                        <li>Truy cập trang web chính thức của sòng bạc 383Sports.</li>
+                        <li>Nhấp vào nút “Đăng ký” ở góc trên bên trái.</li>
+                        <li>Nhập thông tin cần thiết và gửi để hoàn tất đăng ký tài khoản mới.</li>
+
+                    </div>
+
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">MCách đăng ký sòng bạc 383Sports trên thiết bị di động
+                        (hệ điều hành Android)
+                    </h2>
+
+
+                    <div class="list-decimal p-2">
+                        <li>Mở ứng dụng 383Sports của sòng bạc 383Sports.</li>
+                        <li>Nhấp vào “Đăng ký ngay” ở góc dưới bên trái.</li>
+                        <li>Nhập email, đặt mật khẩu và số điện thoại.</li>
+                        <li>Nhập họ tên, chọn giới tính và nhập ngày sinh.</li>
+                        <li>Nhập ID người dùng.</li>
+                        <li>Chọn quốc gia, mã bưu điện và địa chỉ.</li>
+                        <li>Chọn loại tiền tệ bạn muốn sử dụng trong trò chơi.</li>
+                        <li>Nếu bạn có mã thưởng, hãy nhập (nếu không có, bạn không cần nhập).</li>
+                        <li>Xác nhận và chọn đồng ý với điều khoản và chính sách bảo mật.</li>
+                        <li>Chọn có muốn nhận email ưu đãi khuyến mãi hay không.</li>
+                        <li>Nhấp vào nút “Hoàn tất” màu xanh lá cây.</li>
+                        <li>Xác nhận email đăng ký.</li>
+                        <li>Mở email được gửi bởi sòng bạc 383Sports và nhấp vào URL xác nhận đăng ký trong email.</li>
+                        <li>Đăng nhập thành công.</li>
+
+                    </div>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Cách đăng ký sòng bạc 383Sports trên thiết bị di động (hệ
+                        điều hành iOS)</h2>
+
+                    <div class="list-decimal p-2">
+                        <li>Mở ứng dụng 383Sports của sòng bạc 383Sports.</li>
+                        <li>Nhấp vào “Đăng ký ngay” ở góc dưới bên trái.</li>
+                        <li>Nhập email, đặt mật khẩu và số điện thoại.</li>
+                        <li>Nhập họ tên, chọn giới tính và nhập ngày sinh.</li>
+                        <li>Nhập ID người dùng.</li>
+                        <li>Chọn quốc gia, mã bưu điện và địa chỉ.</li>
+                        <li>Chọn loại tiền tệ bạn muốn sử dụng trong trò chơi.</li>
+                        <li>Nếu bạn có mã thưởng, hãy nhập (nếu không có, bạn không cần nhập).</li>
+                        <li>Xác nhận và chọn đồng ý với điều khoản và chính sách bảo mật.</li>
+                        <li>Chọn có muốn nhận email ưu đãi khuyến mãi hay không.</li>
+                        <li>Nhấp vào nút “Hoàn tất” màu xanh lá cây.</li>
+                        <li>Xác nhận email đăng ký.</li>
+                        <li>Mở email được gửi bởi sòng bạc 383Sports và nhấp vào URL xác nhận đăng ký trong email.</li>
+                        <li>Đăng nhập thành công.</li>
+                    </div>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Lưu ý khi đăng ký tài khoản tại sòng bạc 383Sports</h2>
+
+                    <ul class="list-disc p-2">
+                        <li>Khi đặt mật khẩu, bạn phải bao gồm ít nhất một chữ số.</li>
+                        <li>Khi nhập số điện thoại, hãy nhập mã quốc gia của Nhật Bản là “81” sau dấu “+”. Không cần
+                            nhập số “0” ở đầu.</li>
+                        <li>Tên có thể sử dụng chữ Hán hoặc chữ Latinh.</li>
+                        <li>Ngày sinh được nhập theo thứ tự tháng ngày rồi năm. Ví dụ, nếu sinh nhật của bạn là ngày 1
+                            tháng 12 năm 1990, bạn nên nhập 01/12/1990.</li>
+                        <li>ID người dùng chỉ có thể sử dụng chữ Latinh.</li>
+                        <li>Khi chọn quốc gia, hãy chọn “Japan”.</li>
+                        <li>Vui lòng điền địa chỉ chính xác để có thể nhận giải thưởng khi thắng.</li>
+                        <li>Nếu bạn là người chơi cư trú tại Nhật Bản, chúng tôi khuyên bạn nên chọn sử dụng đơn vị tiền
+                            tệ là Yên Nhật (JPY) hoặc Đô la Mỹ (USD).</li>
+                        <li>Chúng tôi khuyên bạn nên đồng ý nhận email khuyến mãi vì sòng bạc 383Sports có thể gửi thông tin
+                            về giải thưởng bất ngờ.</li>
+                    </ul>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Lưu ý khi đăng ký tài khoản tại sòng bạc 383Sports</h2>
+
+                    <ul class="list-disc p-2">
+                        <li>Khi đặt mật khẩu, bạn phải bao gồm ít nhất một chữ số.</li>
+                        <li>Khi nhập số điện thoại, hãy nhập mã quốc gia của Nhật Bản là “81” sau dấu “+”. Không cần
+                            nhập số “0” ở đầu.</li>
+                        <li>Tên có thể sử dụng chữ Hán hoặc chữ Latinh.</li>
+                        <li>Ngày sinh được nhập theo thứ tự tháng ngày rồi năm. Ví dụ, nếu sinh nhật của bạn là ngày 1
+                            tháng 12 năm 1990, bạn nên nhập 01/12/1990.</li>
+                        <li>ID người dùng chỉ có thể sử dụng chữ Latinh.</li>
+                        <li>Khi chọn quốc gia, hãy chọn “Japan”.</li>
+                        <li>Vui lòng điền địa chỉ chính xác để có thể nhận giải thưởng khi thắng.</li>
+                        <li>Nếu bạn là người chơi cư trú tại Nhật Bản, chúng tôi khuyên bạn nên chọn sử dụng đơn vị tiền
+                            tệ là Yên Nhật (JPY) hoặc Đô la Mỹ (USD).</li>
+                        <li>Chúng tôi khuyên bạn nên đồng ý nhận email khuyến mãi vì sòng bạc 383Sports có thể gửi thông tin
+                            về giải thưởng bất ngờ.</li>
+                    </ul>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Lưu ý bổ sung</h2>
+
+                    <ul class="list-disc p-2">
+                        <li>Sau khi đăng nhập, bạn có thể bắt đầu chơi trò chơi tại sòng bạc 383Sports.</li>
+                        <li>Hãy đảm bảo rằng bạn đã đọc và hiểu các điều khoản và điều kiện của sòng bạc 383Sports trước khi
+                            đăng ký.</li>
+                        <li>Sòng bạc 383Sports chỉ chấp nhận người chơi từ 18 tuổi trở lên.</li>
+                        <li>Bạn nên chơi game một cách có trách nhiệm và chỉ sử dụng số tiền mà bạn có thể chi trả.</li>
+                        <li>Chúc bạn có những trải nghiệm vui vẻ tại sòng bạc 383Sports!</li>
+                    </ul>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Lưu ý bổ sung khi đăng ký tài khoản tại sòng bạc
+                        383Sports</h2>
+
+                    <ul class="list-disc p-2">
+                        <li>Mật khẩu của bạn phải mạnh và khó đoán. Sử dụng kết hợp chữ cái, số và ký tự đặc biệt.</li>
+                        <li>Đừng chia sẻ thông tin đăng nhập của bạn với bất kỳ ai.</li>
+                        <li>Cẩn thận với các email giả mạo từ sòng bạc 383Sports. Sòng bạc 383Sports sẽ không bao giờ yêu cầu bạn
+                            cung cấp thông tin cá nhân hoặc tài chính qua email.</li>
+                        <li>Nếu bạn gặp bất kỳ vấn đề gì khi đăng ký, vui lòng liên hệ với bộ phận hỗ trợ khách hàng của
+                            sòng bạc 383Sports.</li>
+                    </ul>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Tại sao nên chọn sòng bạc 383Sports? (5 điểm nổi bật)
+                    </h2>
+
+                    <h3 class="text-[18px] md:text-xl font-medium">1. Sòng bạc 383Sports luôn đảm bảo tính công bằng</h3>
+                    <p>Sòng bạc 383Sports được giám sát bởi tổ chức bên thứ ba “eCOGRA” để đảm bảo tính công bằng trong hoạt
+                        động. Mọi trò chơi và điều khoản thanh toán đều được “eCOGRA” kiểm tra để đảm bảo không có gian
+                        lận. “eCOGRA” là một tổ chức uy tín với quy trình giám sát nghiêm ngặt. Việc sòng bạc 383Sports được
+                        “eCOGRA” chứng nhận cho thấy các trò chơi tại đây là công bằng và người chơi có thể yên tâm tham
+                        gia.</p>
+
+                    <h3 class="text-[18px] md:text-xl font-medium">2. Sòng bạc 383Sports là một sòng bạc hợp pháp</h3>
+                    <p>Sòng bạc 383Sports được điều hành bởi công ty NestlingCorn Limited, là công ty con của Owl In N.V., và
+                        được cấp phép hoạt động hợp pháp bởi chính phủ Curacao. Giấy phép hoạt động của sòng bạc 383Sports có
+                        tên “Curacao Interactive Licensing N.V”. Số hiệu giấy phép trò chơi là 8048/JAZ 2019-055.</p>
+
+                    <h3 class="text-[18px] md:text-xl font-medium">3. Sòng bạc 383Sports mang đến trải nghiệm chơi game đa
+                        dạng</h3>
+                    <p>Sòng bạc 383Sports cung cấp hơn 4.000 trò chơi, bao gồm máy đánh bạc, poker, roulette, blackjack,
+                        v.v., đáp ứng nhu cầu của mọi người chơi. Đối với những người yêu thích máy đánh bạc, sòng bạc
+                        383Sports cung cấp nhiều loại máy đánh bạc khác nhau, từ máy đánh bạc cổ điển đến máy đánh bạc theo
+                        chủ đề, máy đánh bạc 3D, v.v. Đối với những người yêu thích poker, sòng bạc 383Sports cung cấp nhiều
+                        loại trò chơi poker khác nhau, từ Texas Hold’em đến Omaha, v.v. Đối với những người yêu thích
+                        roulette, sòng bạc 383Sports cung cấp nhiều loại trò chơi roulette khác nhau, với tỷ lệ cược khác
+                        nhau, v.v.</p>
+
+                    <h3 class="text-[18px] md:text-xl font-medium">4. Sòng bạc 383Sports mang đến trải nghiệm chơi game chất
+                        lượng cao</h3>
+                    <p>Sòng bạc 383Sports cung cấp trải nghiệm chơi game chất lượng cao với đồ họa sắc nét, âm thanh sống
+                        động, giúp người chơi có thể đắm chìm trong thế giới trò chơi.</p>
+
+                    <h3 class="text-[18px] md:text-xl font-medium">5. Sòng bạc 383Sports mang đến nhiều khuyến mãi và ưu đãi
+                        hấp dẫn</h3>
+                    <p>Sòng bạc 383Sports cung cấp nhiều khuyến mãi và ưu đãi hấp dẫn cho người chơi mới và người chơi hiện
+                        tại, giúp người chơi có thể giành được nhiều giải thưởng và lợi ích hơn. Khuyến mãi dành cho
+                        người chơi mới của sòng bạc 383Sports bao gồm tiền thưởng nạp tiền, vòng quay miễn phí, v.v. Khuyến
+                        mãi dành cho người chơi hiện tại của sòng bạc 383Sports bao gồm khuyến mãi hàng tuần, khuyến mãi hàng
+                        tháng, v.v. Tóm lại, sòng bạc 383Sports là một sòng bạc đáng để lựa chọn với tính công bằng, hợp
+                        pháp, đa dạng, chất lượng cao và nhiều khuyến mãi hấp dẫn.</p>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Người chơi thích gì ở sòng bạc 383Sports?</h2>
+
+                    <ul class="list-disc p-2">
+                        <li>Cung cấp nhiều trò chơi, có thể trải nghiệm nhiều trải nghiệm chơi khác nhau. Sòng bạc 383Sports
+                            cung cấp nhiều loại trò chơi, bạn có thể thoải mái trải nghiệm các chế độ chơi khác nhau.
+                            Bạn cũng có thể thử thách các phần thưởng trong trò chơi, hoặc trải nghiệm niềm vui của việc
+                            đánh bạc nhỏ. Ngoài ra, chúng tôi còn cung cấp các trò chơi sòng bạc trực tuyến, cho phép
+                            người chơi tương tác với nhau trong trò chơi. Cho dù bạn muốn thử thách bản thân để giành
+                            được phần thưởng hay thư giãn, chúng tôi đều có lựa chọn trò chơi phù hợp cho bạn.</li>
+                        <li>Nhận ưu đãi cược gấp đôi khi nạp tiền. Sau khi nạp tiền, bạn sẽ nhận được ưu đãi cược gấp
+                            đôi, có nghĩa là bạn có thể thắng nhiều tiền hơn khi đặt cược. Ngoài ra, bạn còn có thể nhận
+                            được số vòng quay miễn phí bổ sung, để bạn có thể tận hưởng niềm vui của trò chơi lâu hơn.
+                            Chúng tôi cũng cung cấp nhiều loại phần thưởng và cuộc thi, giúp bạn có cơ hội giành được
+                            nhiều giải thưởng hơn. Cho dù bạn là người mới hay người chơi lâu năm, chúng tôi đều có trò
+                            chơi và ưu đãi phù hợp cho bạn. Hãy nhanh tay nạp tiền và bắt đầu hành trình chơi game của
+                            bạn!</li>
+                        <li>Nhận hoàn tiền tiền mặt khi nạp tiền một số tiền nhất định. Chỉ cần nạp tiền một số tiền
+                            nhất định, bạn sẽ nhận được hoàn tiền tiền mặt. Ngoài ra, chúng tôi còn cung cấp các ưu đãi
+                            khác như hoàn tiền sinh nhật, ưu đãi dành riêng cho thành viên VIP, v.v. Những ưu đãi này
+                            không chỉ giúp bạn tận hưởng niềm vui của việc đánh bạc mà còn đồng thời nhận được nhiều ưu
+                            đãi hơn. Ngoài ra, chúng tôi sẽ liên tục giới thiệu các hoạt động mới như ưu đãi theo thời
+                            gian, giúp bạn có cơ hội nhận được thêm hoàn tiền tiền mặt. Do đó, không chỉ nhận được hoàn
+                            tiền tiền mặt mà bạn còn có thể nhận được nhiều ưu đãi hơn, giúp trải nghiệm chơi game của
+                            bạn trở nên hoàn hảo hơn!</li>
+                        <li>Màn hình trò chơi mượt mà, không có hiện tượng treo máy. Độ mượt mà của màn hình trò chơi là
+                            một trong những yếu tố quan trọng của trải nghiệm chơi game. Vì vậy, các nhà phát triển sẽ
+                            đảm bảo màn hình trò chơi không có bất kỳ hiện tượng treo máy nào, để đảm bảo người chơi có
+                            thể trải nghiệm trò chơi một cách mượt mà. Để đạt được mục tiêu này, các nhà phát triển sẽ
+                            sử dụng nhiều công nghệ và công cụ để kiểm tra hiệu suất trò chơi và thực hiện tối ưu hóa và
+                            sửa chữa cần thiết. Ngoài ra, người chơi cũng có thể chủ động phản hồi cho nhà phát triển để
+                            cải thiện trải nghiệm chơi game hơn nữa.</li>
+                        <li>Có thể thưởng thức âm nhạc và hiệu ứng âm thanh chất lượng cao. Trong mỗi trò chơi, bạn có
+                            thể cảm nhận được âm nhạc và hiệu ứng âm thanh chất lượng cao. Các chuyên gia âm nhạc đã
+                            tinh chế các loại nhạc phong phú, từ nhạc chiến đấu sôi động đến nhạc nền nhẹ nhàng, tất cả
+                            đều nhằm mang đến cho bạn trải nghiệm nhập vai. Ngoài ra, đội ngũ âm thanh của chúng tôi
+                            cũng đã phối hợp âm thanh phù hợp nhất cho từng chi tiết trong trò chơi, giúp bạn đắm chìm
+                            hơn trong trò chơi. Cho dù là chủ đề chiến đấu, khám phá hay giải đố, âm nhạc và hiệu ứng âm
+                            thanh sẽ mang lại thêm nhiều niềm vui cho trải nghiệm chơi game của bạn.</li>
+                        <li>Bất kể bạn ở đâu, chỉ cần có internet là có thể chơi bất cứ lúc nào. Bất kể bạn ở đâu, chỉ
+                            cần có internet là có thể tận hưởng niềm vui mà trò chơi mang lại. Cho dù bạn đang ở nhà,
+                            văn phòng hay thậm chí đang đi du lịch, bạn đều có thể truy cập internet và cùng với người
+                            chơi từ khắp nơi trên thế giới đến thế giới sòng bạc trực tuyến của sòng bạc 383Sports. Không chỉ
+                            vậy, trò chơi đánh bạc còn có thể giúp bạn cải thiện khả năng phản ứng, khả năng tư duy và
+                            khả năng giải quyết vấn đề, từ đó tăng cường sức khỏe tinh thần của bạn. Đừng chần chừ nữa,
+                            hãy nhanh chóng tham gia sòng bạc 383Sports và bắt đầu hành trình đánh bạc trực tuyến của bạn!
+                        </li>
+                    </ul>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Mọi người nghĩ sòng bạc 383Sports cần cải thiện những gì?
+                    </h2>
+
+                    <ul class="list-disc p-2">
+                        <li>Có quá nhiều trò chơi và không biết chọn cái nào. Khi chúng ta phải đối mặt với nhiều loại
+                            trò chơi, đôi khi chúng ta có thể cảm thấy rất bối rối và không biết nên chọn cái nào. Do
+                            đó, trước khi đưa ra quyết định, chúng ta cần cân nhắc một số yếu tố, chẳng hạn như chủ đề
+                            của trò chơi, mức độ khó, thời gian chơi, sở thích, v.v. Ngoài ra, chúng ta cũng có thể tham
+                            khảo qua các bài đánh giá trò chơi hoặc nhờ bạn bè tư vấn để giúp chúng ta đưa ra quyết định
+                            tốt hơn. Cuối cùng, đừng quên rằng việc chọn trò chơi là một quá trình rất cá nhân, điều
+                            quan trọng nhất là đừng để bản thân cảm thấy áp lực, tận hưởng quá trình chơi game mới là
+                            điều quan trọng nhất.</li>
+                        <li>Thế giới ảo không thực tế. Trong thế giới ngày nay, công nghệ cho phép chúng ta trải nghiệm
+                            thế giới ảo. Tuy nhiên, ngày càng có nhiều người lo ngại rằng thế giới ảo có thể không cảm
+                            thấy thực sự. Điều này là do các giác quan của chúng ta không được tham gia đầy đủ như trong
+                            thế giới thực. Ngoài ra, công nghệ thực tế ảo vẫn đang trong giai đoạn phát triển và còn
+                            nhiều việc phải làm để nó trở nên sống động hơn. Do đó, một số người cho rằng thực tế ảo
+                            không thể thay thế thế giới thực. Họ lập luận rằng việc trải nghiệm mọi thứ trong thế giới
+                            thực là rất quan trọng, vì thế giới thực đầy những điều phức tạp và tinh tế. Tuy nhiên,
+                            những người khác tin rằng thực tế ảo có khả năng cách mạng hóa cách chúng ta tương tác với
+                            công nghệ và lẫn nhau. Với sự phát triển của công nghệ, thực tế ảo có khả năng trở nên ngày
+                            càng thực tế hơn, cuối cùng không thể phân biệt được với thế giới thực. Trong thời gian chờ
+                            đợi thực tế ảo có sẵn, chúng ta có thể tiếp tục khám phá các khả năng của thực tế ảo và trân
+                            trọng cách nó làm phong phú cuộc sống của chúng ta.</li>
+                        <li>Hiện tại không cung cấp đồng tiền Việt Nam. Hiện tại vẫn chưa cung cấp đồng tiền Việt Nam,
+                            nhưng chúng tôi đang nỗ lực mở rộng các tùy chọn tiền tệ của mình để đáp ứng tốt hơn nhu cầu
+                            của bạn. Chúng tôi hy vọng sẽ sớm thêm đồng tiền Việt Nam để bạn có thể dễ dàng chơi game và
+                            mang đến cho bạn trải nghiệm tốt hơn. Trong khi chờ đồng tiền Việt Nam có sẵn, chúng tôi
+                            khuyên bạn nên tiếp tục theo dõi trang web của chúng tôi để cập nhật thông tin mới nhất và
+                            cập nhật của chúng tôi. Cảm ơn bạn đã kiên nhẫn chờ đợi và ủng hộ.</li>
+                        <li>Ưu đãi hoàn tiền tiền mặt của thành viên VIP cũng có thời hạn sử dụng. Thời hạn sử dụng là 3
+                            ngày. Ưu đãi hoàn tiền tiền mặt của thành viên VIP có thời hạn sử dụng. Thời hạn sử dụng này
+                            có nghĩa là bạn phải sử dụng các ưu đãi này trong một khoảng thời gian nhất định, nếu không
+                            chúng sẽ hết hạn. Theo chính sách của chúng tôi, một khi bạn nhận được ưu đãi hoàn tiền tiền
+                            mặt, bạn sẽ có ba ngày để sử dụng chúng. Lưu ý rằng ba ngày này bao gồm cả ngày lễ và cuối
+                            tuần, vì vậy hãy đảm bảo sử dụng ưu đãi của bạn trong thời hạn sử dụng để tránh hết hạn.
+                        </li>
+                    </ul>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">383Sports Casino cung cấp cho các bạn đặc quyền thành
+                        viên VIP</h2>
+
+                    <p>Hãy đến nhận đặc quyền thành viên VIP mà 383Sports Casino cung cấp ngay thôi! Hãy cùng chúng tôi tìm
+                        hiểu về đặc quyền thành viên VIP của 383Sports Casino. Đặc quyền thành viên VIP được chia thành 7 cấp
+                        độ sau:</p>
+
+                    <ul class="list-disc p-2">
+                        <li>Novice (Mới bắt đầu)</li>
+                        <li>Regular (Trung cấp)</li>
+                        <li>Bronze (Đồng)</li>
+                        <li>Silver (Bạc)</li>
+                        <li>Gold (Vàng)</li>
+                        <li>Platinum (Bạch kim)</li>
+                        <li>Ultimate (Kim cương)</li>
+                    </ul>
+
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Thành viên VIP và Giảm Giá Tiền Mặt tại 383Sports Casino</h2>
+
+                    <p>Một trong những phần thưởng dành cho thành viên VIP của Bons Casino là giảm giá tiền mặt. Hoàn tiền là hoàn lại một số tiền nhất định đã bị mất. Vì giảm giá tiền mặt cần phải đáp ứng một số điều kiện, vui lòng tham khảo các quy định sau:</p>
+                    
+                    <ul class="list-disc p-2">
+                        <li>Số tiền hoàn lại khác nhau tùy theo cấp độ.</li>
+                        <li>Nạp tiền ít nhất một lần.</li>
+                        <li>Có giới hạn về số lần.</li>
+                    </ul>
+                    
+                    <p>Số tiền hoàn lại cho tiền thưởng thành viên VIP của Bons Casino khác nhau tùy theo cấp độ. Có 7 cấp độ từ người mới đến kim cương. Tỷ lệ hoàn tiền cho mỗi cấp độ như sau:</p>
+                    
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--foooter -->
+    <footer class="from-black to-sky-800 bg-gradient-to-b text-white ">
+        <div class="container flex justify-center items-center">
+            <div class="p-2 ">
+                <div class="mt-10 mb-10  grid grid-cols-2 md:grid-cols-3 gap-12 justify-center items-center">
+                    <div class="logo flex justify-center items-center">
+                        <img src="./images/383sports-tet.png" alt="">
+                    </div>
+                    <div class="img-icon flex justify-center items-center">
+                        <img src="./images/Screenshot 2024-06-13 162004.png" alt="">
+                    </div>
+                    <div class=" space-x-2 text-[18px] flex justify-center items-center">
+                        <div class="icon f">
+                            <img src="./images/vi.png" alt="" class="sm:w-12 w-28">
+                        </div>
+                        <div class="">
+                            <span>Tiếngviệt</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center border-b items-center">
+                    <span class="text-2xl">Categories</span>
+                    <span></span>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 cursor-pointer gap-8 justify-center  mx-auto ">
+                    <div class="w-full flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Đăng-nhập-vào-Casino-383Sport.html"
+                                        class="hover:text-blue-400 ">Đăng nhập vào Casino
+                                        383Sports</a></li>
+                                <li class="hover:border-b"><a href="./Phương-thức-rút-tiền.html"
+                                        class="hover:text-blue-400 ">Phương thức rút tiền </a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Sòng-bạc-trực-tiếp.html"
+                                        class="hover:text-blue-400 ">Sòng bạc trực tiếp</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Blackjack.html"
+                                        class="hover:text-blue-400 ">Blackjack</a></li>
+                                <li class="hover:border-b"><a href="./Poker.html" class="hover:text-blue-400 ">Poker</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--col2-->
+                    <div class="col2 flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Đăng-ký-tại-sòng-bạc-383Sports.html"
+                                        class="hover:text-blue-400 ">
+                                        Đăng ký tại sòng bạc 383Sports</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Ứng-dụng-di-động-383Sports.html"
+                                        class="hover:text-blue-400 ">Ứng dụng di động 383Sports</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Trò-chơi-trên-bàn.html"
+                                        class="hover:text-blue-400 ">Trò chơi trên bàn</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Roulette.html"
+                                        class="hover:text-blue-400 ">Roulette</a></li>
+                                <li class="hover:border-b"><a href="./Jackpot.html"
+                                        class="hover:text-blue-400 ">Jackpot</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--col3-->
+                    <div class="col3 flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Tiền-thưởng-383Sports-Casino.html"
+                                        class="hover:text-blue-400 ">
+                                        Tiền thưởng 383Sports Casino</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Phương-thức-nạp-tiền.html"
+                                        class="hover:text-blue-400 ">Phương thức nạp tiền</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Cá-cược-thể-thao.html"
+                                        class="hover:text-blue-400 ">Cá cược thể thao</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Baccarat.html"
+                                        class="hover:text-blue-400 ">Baccarat</a></li>
+                                <li class="hover:border-b"><a href="./Lottery.html"
+                                        class="hover:text-blue-400 ">Lottery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!--backtop-->
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

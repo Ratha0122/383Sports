@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--tailwindcss-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- font awesome..! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!--style css-->
+    <link rel="stylesheet" href="./style.css">
+    <!--icon-->
+    <title>383Sports | Sòng Bạc Đáng Tin Cậy Việt Nam 2022</title>
+</head>
+
+<style>
+    .active {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <!--backtop-->
+    <a href="" class="back"></a>
+
+
+
+    <header class=" from-gray-900 to-gray-600 bg-gradient-to-r text-white">
+        <nav class=" relative mx-auto">
+            <div class="container flex justify-between items-center space-x-2 px-4 py-2">
+                <button id="mobile-icon" class="sm:hidden border h-8 w-14 rounded-lg text-white">
+                    <i onclick="changeIcon(this)" class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="flex max-sm:justify-center cursor-pointer space-x-4 items-center  w-full">
+                    <div class="logo">
+                        <a href="./homepage.html"><img src="./images/383sports-tet.png" alt="" class="w-[120px]"></a>
+                    </div>
+                    <div class="login hidden sm:block">
+                        <ul class="flex justify-center items-center space-x-4">
+                            <li class=""><a onclick=url() class="hover:no-underline">Đăng nhập</a></li>
+                            <li class="bg-orange-600 py-1 px-4 rounded-full hover:opacity-90"><a onclick=url()
+                                    class="hover:no-underline">Đăng ký</a></li>
+                        </ul>
+                    </div>
+                    <div class="sm:block hidden">
+                        <img src="./images/app.png" alt="" class="w-10  ">
+                    </div>
+                </div>
+                <div class=" flex space-x-2 items-center text-[18px]">
+                    <div class="icon f">
+                        <img src="./images/vi.png" alt="" class="sm:w-12 w-28">
+                    </div>
+                    <div class="">
+                        <span>Tiếngviệt</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--mobile-menu-->
+            <div id="mobile-menu"
+                class="mobile-menu absolute h-screen top-[70px] left-[-100%] transition-all duration-500 w-full flex justify-center  p-4 bg-slate-900  space-y-4 font-medium text-[18px]">
+                <div class="cursor-pointer">
+
+                    <div class="login">
+                        <ul class="flex items-center space-x-4">
+                            <li><a onclick=url() class="hover:no-underline">Đăng nhập</a></li>
+                            <li class="bg-orange-600 py-1 px-4 rounded-full hover:opacity-90"><a onclick=url()
+                                    class="hover:no-underline">Đăng ký</a></li>
+                        </ul>
+                    </div>
+                    <div class="app *:flex *:items-center mt-10 *:font-normal">
+                        <h1>App - <img src="./images/app.png" alt="" class="w-8"></h1>
+                    </div>
+                    <div class="menu mt-10 ">
+                        <ul class="space-y-6">
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Đăng nhập vào Casino
+                                    383Sports</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Tiền thưởng 383Sports
+                                    Casino</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Phương thức rút tiền </a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Ứng dụng di động
+                                    383Sports</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Phương thức nạp tiền</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Sòng bạc trực tiếp</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Trò chơi trên bàn</a>
+                            </li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Cá cược thể thao</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Blackjack</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Roulette</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Baccarat</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Poker</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Jackpot</a></li>
+                            <li class="hover:border-b"><a href="" class="hover:text-blue-400 ">Lottery</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <section class="bg-[url(https://bons.social/wp-content/themes/bons-social/assets/images/carousel-bg.jpeg)] ">
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                        
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="relative grid grid-cols-1 flex-col-reverse md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">Các khe chơi game tốt nhất! Chơi và
+                                    giành chiến thắng!
+                                </h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl ">Quay các khe</button>
+                                </div>
+
+                            </div>
+                            <duv class="img w-96 flex justify-center">
+                                <img src="./images/main-banner-slot.png" class="d-block w-full text-center" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1  md:grid-cols-2  text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">Niềm vui khó quên khi chơi với người
+                                    chia bài trực tiếp
+                                    từ 383Sports!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Chơi với người chia
+                                        bài</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-live-dealer.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1 md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">
+                                    Nhận phần thưởng lớn từ 383Sports Casino!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Yêu cầu tiền thưởng của
+                                        bạn</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-bonus.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="grid grid-cols-1 md:grid-cols-2 text-white justify-center items-center font-medium">
+                            <div class="text">
+                                <h1 class="text-3xl md:text-5xl text-center leading-relaxed">
+                                    Nhận phần thưởng lớn từ 383Sports Casino!</h1>
+                                <div class="btn flex justify-center mt-10">
+                                    <button class="bg-orange-500 py-1 px-4 rounded-md text-2xl">Yêu cầu tiền thưởng của
+                                        bạn</button>
+                                </div>
+                            </div>
+                            <duv class="img w-96">
+                                <img src="./images/main-banner-betting.png" class="d-block w-100" alt="...">
+                            </duv>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="from-slate-700 to-zinc-800 bg-gradient-to-b p-2">
+        <div class="container mb-10">
+            <div class="text text-white">
+                <div class="*:mt-4">
+                    <span class="font-serif"><b>383sport </b>>
+                        Poker</span>
+                    <h2 class="text-[22px] md:text-3xl font-medium">Poker</h2>
+                    <h2 class="text-[20px] md:text-2xl font-medium">Trải nghiệm Poker đầy cuốn hút tại 383Sports Casino </h2>
+                    <p>383Sports Casino là một sòng bạc trực tuyến phổ biến cung cấp nhiều trò chơi cho người chơi thưởng
+                        thức. Một trong những trò chơi phổ biến nhất trên trang web là bài Poker, trò chơi này đã trở
+                        thành trò chơi yêu thích của người chơi từ khắp nơi trên thế giới và tại Việt Nam. Trong bài
+                        viết này, chúng ta cùng tìm hiểu rõ hơn về trò chơi cuốn hút này tại 383Sports nhé!</p>
+
+                </div>
+                <div class="img flex justify-center">
+                    <div class="">
+                        <img src="./images/Các-thành-phần-chính-trong-sòng-bài-trực-tiếp-383Sports.png"
+                            alt="">
+
+                    </div>
+                </div>
+
+                <div class="*:mt-4">
+
+                    <h1 class="text-[20px] md:text-2xl font-medium">Tìm hiểu Poker tại 383Sports Casino </h1>
+                    <p>Poker được chơi với một bộ bài tiêu chuẩn gồm 52 lá. Mỗi người chơi sẽ được phát 2 lá bài riêng
+                        tư và sau đó sẽ có một số vòng cược trong đó các người chơi có thể đặt cược hoặc rút lui. Sau
+                        khi tất cả các vòng cược đã kết thúc, người chơi sẽ phải mở bài của mình và người có bộ bài tốt
+                        nhất sẽ giành chiến thắng.</p>
+                    <p>Có nhiều loại Poker khác nhau như Texas Hold’em, Omaha, Seven-Card Stud và Razz. Mỗi dạng Poker
+                        có các quy tắc riêng và các chiến lược khác nhau. </p>
+                    <p>Tại 383Sports Casino, sau khi đã đăng ký tài khoản và nạp tiền, bạn có thể sử dụng công cụ tìm kiếm
+                        ngay trên website để lựa chọn các loại Poker khác nhau. Do đó, bạn chỉ cần tìm kiếm với từ khóa
+                        “Poker” hoặc nhập các từ khóa liên quan. Chẳng hạn như: “Hold’em”
+
+                    </p>
+                    <div class="img flex justify-center">
+                        <div class="">
+                            <img src="./images/Các-thành-phần-chính-trong-sòng-bài-trực-tiếp-383Sports.png"
+                                alt="">
+
+                        </div>
+                    </div>
+                    <h2 class="text-[20px] md:text-2xl font-medium">Tại sao không có gian lận trong 383Sports Poker
+                    </h2>
+                    <p>Trò chơi 383Sports Poker là một trò chơi đánh bài phổ biến và hấp dẫn, với một cộng đồng người chơi
+                        rộng lớn. Một trong những lý do tại sao không có gian lận trong 383Sports Poker đó là tính minh bạch
+                        và công bằng của trò chơi này.</p>
+                    <p>383Sports Poker đã được phát triển và hoàn thiện qua nhiều thế hệ người chơi, đồng thời cũng đã trải
+                        qua nhiều giai đoạn kiểm soát chất lượng và sự đánh giá từ các tổ chức chuyên nghiệp. Hệ thống
+                        quản lý và phân phối bài được thiết kế một cách cẩn thận để đảm bảo rằng mọi người chơi đều có
+                        cơ hội công bằng để chiến thắng.</p>
+                    <p>Ngoài ra, sự phổ biến và uy tín của trò chơi 383Sports Poker cũng là yếu tố quan trọng góp phần vào
+                        việc ngăn chặn gian lận. Với hàng triệu người chơi tham gia và theo dõi trò chơi này, bất kỳ
+                        hành vi gian lận nào sẽ nhanh chóng bị phát hiện và công khai. Sự công khai này góp phần tạo ra
+                        một môi trường chơi game lành mạnh và tin cậy cho tất cả người chơi.</p>
+
+                    <p>Bên cạnh đó, tính chất của trò chơi 383Sports Poker cũng đóng vai trò quan trọng trong việc ngăn chặn
+                        gian lận. Trò chơi này dựa trên các nguyên tắc và quy tắc rõ ràng, bao gồm việc sử dụng bộ bài
+                        tiêu chuẩn và quy định rõ ràng về luật chơi. Điều này giúp tạo ra một môi trường công bằng và
+                        không cho phép các hành vi gian lận như xem bài hoặc đổi bài trong quá trình chơi.</p>
+                    <p>Tóm lại, trò chơi 383Sports Poker không có gian lận nhờ vào tính minh bạch và công bằng của nó, sự phổ
+                        biến và uy tín, cùng với quy tắc và nguyên tắc rõ ràng. Người chơi có thể yên tâm rằng khi tham
+                        gia vào trò chơi này, họ đang tham gia vào một môi trường chơi game trung thực và không có hành
+                        vi gian lận.
+
+                    </p>
+                    <div class="img flex justify-center">
+                        <div class="">
+                            <img src="./images/Các-thành-phần-chính-trong-sòng-bài-trực-tiếp-383Sports.png"
+                                alt="">
+
+                        </div>
+                    </div>
+                    <h2 class="text-[20px] md:text-2xl font-medium">383Sports Poker có bất hợp pháp không?</h2>
+
+
+                    <p>Trò chơi 383Sports Poker không bất hợp pháp. Đây là một trò chơi đánh bài trực tuyến phổ biến và pháp
+                        lý, được chấp thuận và hoạt động dưới sự giám sát của các cơ quan chức năng.
+                    </p>
+                    <p>383Sports Poker tuân thủ các quy định và quy tắc về an toàn và hợp pháp của ngành công nghiệp trò chơi
+                        trực tuyến. Nó hoạt động dựa trên các giấy phép và giải pháp pháp lý, đảm bảo tính minh bạch và
+                        đáng tin cậy.
+                    </p>
+
+                    <p>Tuy nhiên, một điều bạn cần lưu ý rằng: Hành vi đặt cược là hành vi khá nhạy cảm tại thời điểm
+                        hiện tại. Một số đất nước sẽ thắt chặt vấn đề này. 383Sports muốn bạn hiểu và chấp nhận rủi ro về
+                        pháp lý khi tham gia cược trong các trò chơi về Poker. Bên cạnh đó, bạn cũng cần biết rằng, 383Sports
+                        không cổ vũ bất kì ai tham gia. Vì vậy, 383Sports sẽ không chịu trách nhiệm về các vấn đề pháp lý.
+                        Hãy cân nhắc thật kỹ trước khi tham gia và quản lý vốn kỷ luật. Đừng bao giờ bỏ hết tài sản của
+                        bản thân chỉ để thỏa mãn niềm vui giải trí hay tính hơn thua với nhau.</p>
+                    <div class="img flex justify-center">
+                        <div class="">
+                            <img src="./images/Các-thành-phần-chính-trong-sòng-bài-trực-tiếp-383Sports.png"
+                                alt="">
+
+                        </div>
+                    </div>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Các đặc điểm của Poker tại 383Sports Casino </h2>
+
+                    <p>383Sports Poker là một trò chơi đánh bài trực tuyến hấp dẫn và mang đến cho người chơi nhiều tính năng
+                        độc đáo và thú vị. Dưới đây là một số tính năng chính của 383Sports Poker:</p>
+                    <p><i>Đa dạng các phiên bản trò chơi:</i> 383Sports Poker cung cấp nhiều phiên bản trò chơi poker khác
+                        nhau, bao gồm biến thể của Texas Hold’em, Omaha, Seven Card Stud, và nhiều hình thức chơi khác.
+                        Người chơi có thể lựa chọn theo sở thích và kỹ năng cá nhân.</p>
+                    <p><i>Môi trường trực tuyến:</i> 383Sports Poker cho phép người chơi tham gia vào môi trường trực tuyến,
+                        kết nối với người chơi khác từ khắp nơi trên thế giới. Điều này tạo ra một trải nghiệm chơi game
+                        đa người chơi sống động và tương tác..</p>
+                    <p><i>Hệ thống giải thưởng và cấp độ:</i> 383Sports Poker cung cấp hệ thống giải thưởng hấp dẫn, bao gồm
+                        các giải thưởng tiền mặt, vật phẩm ảo và các sự kiện đặc biệt. Người chơi có thể leo lên các cấp
+                        độ cao hơn và nhận được các phần thưởng độc đáo.</p>
+                    <p><i>Giao diện người dùng thân thiện: </i> Giao diện của 383Sports Poker được thiết kế để dễ sử dụng và
+                        thân thiện với người chơi. Người chơi có thể dễ dàng tham gia vào bàn chơi, tương tác với các
+                        chức năng và tùy chỉnh thiết lập theo ý muốn.</p>
+                    <p><i>Tính năng chat và giao tiếp:</i> 383Sports Poker cung cấp tính năng chat cho phép người chơi giao
+                        tiếp và trò chuyện với nhau trong quá trình chơi. Điều này tạo ra không khí thân mật và gắn kết
+                        giữa các thành viên trong cộng đồng poker.</p>
+                    <p><i>Bảo mật và công bằng:</i> 383Sports Poker đặt sự bảo mật và công bằng lên hàng đầu. Hệ thống đảm
+                        bảo rằng mọi giao dịch và thông tin cá nhân của người chơi được bảo vệ an toàn. Đồng thời, việc
+                        chia bài và quyết định kết quả được thực hiện một cách công bằng và ngẫu nhiên.</p>
+                    <h2 class="text-[20px] md:text-2xl font-medium">Quy tắc cần nắm khi chơi Poker tại 383Sports Casino
+                    </h2>
+
+                    <div class="img flex justify-center">
+                        <div class="">
+                            <img src="./images/Các-thành-phần-chính-trong-sòng-bài-trực-tiếp-383Sports.png"
+                                alt="">
+                        </div>
+                    </div>
+
+                    <p>Sự phát triển của poker trực tuyến đã đóng góp vào việc trở thành một trong những trò chơi bài
+                        phổ biến nhất trên thế giới, nhưng có nhiều loại poker khác nhau đến mức có thể khiến người mới
+                        bắt đầu cảm thấy khó khăn.</p>
+                    <p>Để đơn giản hóa, 383Sports đã tổng hợp một số quy tắc cơ bản cần nắm khi chơi Poker tại bất kì sòng
+                        bạc nào. Những quy tắc này dựa trên bốn loại Poker chính phổ biến hiện nay. Và dĩ nhiên là bạn
+                        có thể áp dụng nó tại 383Sports Casino.</p>
+                    <h2 class="text-[20px] md:text-2xl font-medium">Hiểu rõ thứ tự của các lá bài
+                    </h2>
+
+                    <p>Để chơi Poker, người chơi cần phải hiểu rõ thứ tự của các lá bài. Thứ tự các lá bài từ cao đến
+                        thấp là: Át (còn Xì), K, Q, J, 10, 9, 8, 7, 6, 5, 4, 3, 2. Bài Poker gồm 52 lá bài và không có
+                        lá bài Jocker.</p>
+                    <h2 class="text-[20px] md:text-2xl font-medium"> Hiểu rõ thứ hạng của các bộ bài Poker tại 383Sports
+                    </h2>
+
+                    <p>Các bộ bài trong Poker được xếp theo thứ tự từ cao đến thấp như sau: Royal Flush (Thùng Phá
+                        Sảnh), Straight Flush (Sảnh Liên), Four of a Kind (Bốn Giống), Full House (Cặp Ba), Flush (Cùng
+                        Chất), Straight (Sảnh), Three of a Kind (Ba Giống), Two Pair (Hai Đôi), One Pair (Một Đôi), và
+                        High Card (Lá Cao Nhất).</p>
+
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Hiểu rõ các thao tác trong trò chơi
+                    </h2>
+
+                    <p>Các thao tác trong trò chơi Poker bao gồm: đặt cược, gọi cược, tăng cược, xem bài và bỏ lượt.
+                        Người chơi cần phải hiểu rõ các thao tác này để có thể đưa ra quyết định chính xác trong quá
+                        trình chơi.</p>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Gạt đi – Bluffing
+                    </h2>
+
+                    <p>Có thể thắng các ván poker mà không cần giữ tay bài tốt nhất bằng cách gạt đi đối thủ của bạn.
+                        Bằng cách Bluffing thường liên quan đến sự truyền tải sự tự tin trong tay bài của bạn tốt hơn
+                        hẳn so với thực tế hiện có. Và hãy hy vọng rằng những đối thủ của bạn sẽ rút lui trước sự tự tin
+                        đó thay vì cùng đối mặt với bạn đến ‘màn trình diễn cuối cùng’.</p>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Cược bắt buộc – Forced bets
+                    </h2>
+
+                    <p>Với 383Sports Poker hay Poker nói chung, hầu như tất cả hình thức Poker đều đòi hỏi chung một loại
+                        cược bắt buộc vào đầu ván cược – thường được gọi là “ANTE’ hoặc ‘BLIND’. Các trò chơi poker có
+                        một cược mù nhỏ và một cược mù lớn; thường cược mù lớn sẽ gấp đôi các cược mù nhỏ. </p>
+                    <h2 class="text-[20px] md:text-2xl font-medium">Tùy chọn đặt cược – Betting options
+                    </h2>
+
+                    <p>Sau các đặt cược bắt buộc, vòng đặt cược đầu tiên bắt đầu. Người chơi thường có các lựa chọn đặt
+                        cược sau đây, tùy thuộc vào sự tự tin trong tay bài của họ. </p>
+                    <div class="list">
+                        <li>Check: Đặt cược không có tiền và chuyển lượt đến người chơi kế tiếp.</li>
+                        <li>Bet: Đặt cược một số tiền nhất định lên bàn, tất cả những người chơi sau đó phải gọi hoặc
+                            tăng cược để tiếp tục tham gia.</li>
+                        <li>Call: Gọi một cược đã được đặt trước đó để tiếp tục tham gia ván chơi.</li>
+                        <li>Raise: Tăng mức cược hiện tại, buộc những người chơi khác phải đặt cược cao hơn để tiếp tục
+                            tham gia.</li>
+                        <li>Fold: Rút lui khỏi ván chơi và không tiếp tục đặt cược. Bạn mất mọi tiền đã đặt vào ván này.
+                        </li>
+                        <li>All in – Khi một người chơi không còn đủ số chip để gọi cược, họ có thể chơi hết số chip còn
+                            lại. Cược tiếp theo diễn ra trong một nồi phụ và người chơi all-in chỉ có thể thắng số chip
+                            trong nồi khi họ chơi all-in trong bất kỳ màn trình diễn cuối cùng nào.</li>
+                    </div>
+
+                    <p>Các vòng đặt cược tiếp theo sẽ tiếp tục diễn ra cho đến khi tất cả những người chơi còn lại gọi
+                        cược cuối cùng hoặc mở bài để xem ai là người chiến thắng.</p>
+
+                    <div class="img flex justify-center">
+                        <div class="">
+                            <img src="./images/Sòng-bạc-trực-tiếp-383Sports-hoạt-dộng-như-thế-nào-1.png"
+                                alt="">
+
+                        </div>
+                    </div>
+
+
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Các vòng cược
+                    </h2>
+                    <p>Trong poker, mỗi vòng cược cung cấp cơ hội sử dụng các tùy chọn cược đã được trình bày ở phần
+                        trước, dựa trên sự tự tin trong tay bài và nhận định về chất lượng tay bài của đối thủ. Điều
+                        cuối cùng có thể được đánh giá chủ yếu thông qua việc xem họ đặt cược hoặc tăng cược bao nhiêu.
+                        Tương tự khi chơi tại 383Sports Poker, bạn cần lưu ý kĩ đến các vòng cược và chú ý đến cách cược của
+                        đối thủ để có một ván cờ đầy thú vị. </p>
+                    <p>Tất cả các loại poker đều có ít nhất một vòng cược, trong khi phần lớn đều có ít nhất hai vòng.
+                        Tại 383Sports Poker cũng tương tự có ít nhất là 2 vòng cược. </p>
+
+                    <p>Các vòng này thường diễn ra trước và sau các sự kiện trong trò chơi như phân phát flop trong
+                        Texas Holdem và cho phép người chơi lên kế hoạch chiến lược khi tay bài diễn tiến. Texas Holdem
+                        và Omaha, được gọi là trò chơi “community card”, có thể có đến bốn vòng cược.</p>
+
+
+                    <p><b><i>Mô tả cách chơi 383Sports Poker chi tiết và đơn giản – Minh họa qua trò chơi poker phổ biến –
+                                Texas Holdem:</i></b> </p>
+                    <div class="list">
+                        <li>Người chia bài phân hai lá bài cho mỗi người chơi.</li>
+
+                        <li>Cược mù nhỏ được đặt, sau đó là cược mù lớn.</li>
+                        <li>Vòng cược đầu tiên bắt đầu, người chơi đặt cược dựa trên sự tự tin trong tay bài của họ.
+                        </li>
+                        <li>Người chia bài phân ba “community cards” mở.</li>
+                        <li>Vòng cược thứ hai bắt đầu.</li>
+                        <li>Người chia bài phân thẻ “community card” thứ tư, còn được gọi là “turn”.</li>
+                        <li>Vòng cược thứ ba bắt đầu.</li>
+                        <li>Người chia bài phân thẻ “community card” thứ năm, còn được gọi là “river”.</li>
+                        <li>Vòng cược cuối cùng diễn ra.</li>
+                        <li>Nếu hai hoặc nhiều người chơi vẫn chưa rút lui, tất cả người chơi còn lại hiển thị lá bài
+                            của mình.</li>
+                        <li>Người chiến thắng là người có tay bài tốt nhất theo xếp hạng bài poker.</li>
+                    </div>
+
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Cấu trúc/cuộn cược</h2>
+
+                    <p>Có nhiều cách khác nhau để cấu trúc cuộn cược trong poker. Ba cấu trúc dưới đây là phổ biến nhất
+                        trong poker trực tuyến và thường được liệt kê cùng với loại 383Sports poker trong sảnh:</p>
+
+                    <p><i><b>Giới hạn pot (PL)</b></i> – Người chơi có thể đặt cược hoặc tăng cược lên bất kỳ số tiền
+                        nào cho đến kích thước của nồi tổng.</p>
+                    <p><i><b>Giới hạn cố định (FL)</b></i> – Đặt cược và tăng cược phải được thực hiện bằng số tiền cố
+                        định.</p>
+                    <p><i><b>Không giới hạn (NL) – </b></i> Người chơi có thể đặt cược toàn bộ số chip của họ bất cứ lúc
+                        nào đến lượt đặt cược của họ.</p>
+
+                    <p>Fair Play/Chơi công bằng – Nhà cung cấp trò chơi blackjack tại 383Sports Casino đều được kiểm
+                        định và
+                        có uy tín tốt. Máy tính Ngẫu nhiên (The Random Number Generator-RNG) điều khiển trò chơi của họ
+                        được kiểm tra định kỳ, trong khi những người chia bài trực tiếp có giấy phép chuyên nghiệp và
+                        việc sử dụng nhiều camera ghi lại mọi chi tiết nhỏ nhất với độ phân giải cao làm cho việc gian
+                        lận trở nên rất khó để không bị phát hiện.</p>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Bốn biến thể chính của poker
+                    </h2>
+
+                    <div class="img flex justify-center">
+                        <div class="">
+                            <img src="./images/Các-tính-năng-của-Bonds-Live-Casino-.png" alt="">
+                            <div class="span flex justify-center items-center">
+                                <span>Có nhiều loại poker khác nhau và chúng thường được phân loại vào một trong bốn
+                                    danh mục sau đây:</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <p><b><i>Poker dựa trên bài chung</i></b></p>
+
+
+
+                    <p>Người chơi được chia một số lá bài ít hơn một bộ bài poker năm lá. Sau đó, một số lá bài chung
+                        được chia mở ra với mục tiêu để người chơi tạo thành tay bài năm lá tốt nhất có thể bằng một số
+                        sự kết hợp của lá bài của riêng họ và lá bài chung. Các biến thể nổi tiếng bao gồm: Texas
+                        Holdem, Omaha </p>
+
+
+                    <p><b><i>Poker rút</i></b></p>
+
+                    <p>Là biến thể poker khác trong đó người chơi nhận được tất cả năm lá bài từ đầu trò chơi, sau đó có
+                        thể cố gắng cải thiện tay bài của mình bằng cách bỏ bài và nhận lại lá bài mới. Các biến thể nổi
+                        tiếng bao gồm: five-card draw</p>
+                    <p><b><i>Poker stud</i></b></p>
+
+                    <p>Trong các trò chơi poker stud, người chơi được chia bài một cách từng lá một trong một sự kết hợp
+                        cụ thể của các lá bài mở và lá bài bị úp, thường có một vòng cược giữa mỗi lần chia bài. Các
+                        biến thể nổi tiếng bao gồm: seven-card stud, razz</p>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Một số trò chơi Poker nổi bật tại 383Sports Casino
+                    </h2>
+                    <p>Sòng bạc trực tuyến 383Sports là một trong những trang web uy tín, cung cấp cho người chơi một loạt
+                        các trò chơi Poker đa dạng và hấp dẫn. Mỗi trò chơi đều có những quy tắc và chiến lược riêng,
+                        mang lại cho người chơi những trải nghiệm đa dạng và thú vị. Dưới đây là ba trò chơi nổi bật mà
+                        bạn có thể tham khảo và trải nghiệm. </p>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Casino Hold’em
+                    </h2>
+                    <p>Casino Hold’em là một trong những trò chơi Poker phổ biến tại 383Sports Casino. Đây là trò chơi biến
+                        thể từ Texas Hold’em. Điểm khác biệt của trò chơi này so với Texas chính là sự tương tác. Tại
+                        383Sports Casino, bạn sẽ tương tác với nhà cái thông qua người chia bài trực tiếp. Đối với Texas
+                        Hold’em, bạn sẽ chơi với những người khác thay vì nhà cái.</p>
+                    <p>Bạn sẽ cần đánh thắng phần bài của nhà cái bằng cách có được phần bài năm lá tốt nhất có thể.
+                        Điều này sẽ bao gồm hai lá bài được chia cho người chơi và năm lá bài chung.
+                    </p>
+                    <p>Đối với trò chơi này, 383Sports không giới hạn số lượng người chơi. Vì vậy, bạn có thể nhận một ghế
+                        chơi bất cứ khi nào bạn muốn.</p>
+                    <div class="img flex justify-center">
+                        <div class="">
+                            <img src="./images/Sòng-bạc-trực-tiếp-383Sports-hoạt-dộng-như-thế-nào-1.png"
+                                alt="">
+
+                        </div>
+                    </div>
+
+                    <h1 class="text-[20px] md:text-2xl mt-10 font-medium">Joker Poker </h1>
+
+
+                    <p>Trò chơi rút một bộ năm thẻ. Mỗi trò chơi mới có giá một cổ phần. Ngoài việc bộ bài chứa quân bài
+                        từ 2 đến quân Át thì còn có một lá Joker thay thế cho bất kỳ quân bài nào khác trong trò chơi.
+                        Điều này có nghĩa là bộ bài sẽ có 53 lá. Với đặc điểm của lá Joker này, trò chơi trở nên cuốn
+                        hút hơn bình thường rất nhiều. Đó cũng là lý do đây là một trong những trò chơi Poker không thể
+                        thiếu tại 383Sports Casino.
+                    </p>
+
+                    <div class="img flex justify-center">
+                        <div class="">
+                            <img src="./images/Sòng-bạc-trực-tiếp-383Sports-hoạt-dộng-như-thế-nào-1.png"
+                                alt="">
+
+                        </div>
+                    </div>
+                    <h1 class="text-[20px] md:text-2xl mt-10 font-medium">Caribbean Stud Poker </h1>
+                    <p>Caribbean Stud Poker là một trò chơi Poker khác có mặt trên sòng bạc trực tuyến 383Sports. Trò chơi
+                        này yêu cầu người chơi tạo ra một bộ bài mạnh hơn đối thủ. Trò chơi này cũng có một số quy tắc
+                        và chiến lược riêng, vì vậy người chơi cần phải tìm hiểu kỹ trước khi bắt đầu chơi. Tuy nhiên,
+                        nếu chơi đúng cách, người chơi có thể kiếm được khoản tiền lớn từ trò chơi này.</p>
+
+                    <div class="img flex justify-center">
+                        <div class="">
+                            <img src="./images/Sòng-bạc-trực-tiếp-383Sports-hoạt-dộng-như-thế-nào-1.png"
+                                alt="">
+
+                        </div>
+                    </div>
+                    <h1 class="text-[20px] md:text-2xl mt-10 font-medium">Các nhà cung cấp trò chơi Poker tại 383Sports
+                        Casino </h1>
+                    <h1 class="text-[20px] md:text-2xl mt-10 font-medium">Evolution Gaming </h1>
+                    <p>Evolution Gaming là một trong những nhà cung cấp trò chơi Poker hàng đầu trên thế giới, và cũng
+                        là một trong những đối tác đáng tin cậy của 383Sports Casino. Nhà cung cấp này cung cấp các trò chơi
+                        Poker trực tuyến chất lượng cao, bao gồm Ultimate Texas Hold’em, Three Card Poker và Carribean
+                        Stud Poker. Tất cả các trò chơi đều có giao diện tuyệt vời và được trình chiếu trong chất lượng
+                        video HD.</p>
+
+
+                    <h1 class="text-[20px] md:text-2xl mt-10 font-medium">Nhà cung cấp 2: Betsoft </h1>
+                    <p>Betsoft là một nhà cung cấp trò chơi Poker nổi tiếng khác trên 383Sports Casino. Các trò chơi Poker
+                        của Betsoft đặc biệt với đồ họa 3D tuyệt đẹp và âm thanh sống động. Nhà cung cấp này cung cấp
+                        các trò chơi như Pai Gow Poker, Oasis Poker và Red Dog Poker cho người chơi. Các trò chơi đều có
+                        nhiều tính năng thú vị và cơ hội để giành chiến thắng lớn.</p>
+
+
+                    <h1 class="text-[20px] md:text-2xl mt-10 font-medium">Nhà cung cấp 3: NetEnt </h1>
+                    <p>NetEnt là một nhà cung cấp trò chơi Poker khác trên 383Sports Casino, với danh tiếng về việc cung cấp
+                        các trò chơi Poker trực tuyến chất lượng cao. Các trò chơi Poker của NetEnt bao gồm Texas
+                        Hold’em, Casino Hold’em và Oasis Poker. Nhà cung cấp này cung cấp các trò chơi với giao diện đẹp
+                        mắt, âm thanh tuyệt vời và tính năng đa dạng.</p>
+
+                    <h1 class="text-[20px] md:text-2xl mt-10 font-medium">Lưu ý chỉ dành cho người chơi 383Sports Poker</h1>
+                    <p>Người chơi Blackjack có thể sử dụng thẻ chiến lược (strategy card), cung cấp một hướng dẫn về tất
+                        cả các kết quả và tình huống có thể xảy ra trong trò chơi. Học và tuân thủ thẻ chiến lược sẽ
+                        giúp người chơi đưa ra những quyết định có lợi nhất, đảm bảo kết quả tích cực và nhỏ hơn lợi thế
+                        của nhà cái.</p>
+                    <div class="img flex justify-center">
+                        <div class="">
+                            <img src="./images/Các-tính-năng-của-Bonds-Live-Casino-.png" alt="">
+                            <div class="span flex justify-center items-center">
+                                <span>Có nhiều loại poker khác nhau và chúng thường được phân loại vào một trong bốn
+                                    danh mục sau đây:</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                   
+                    <p><i><b>Chơi một cách có trách nhiệm:</b></i>Khi tham gia 383Sports Poker, hãy chơi một cách có trách nhiệm và biết khi nào nên dừng. Đặt giới hạn cho việc đặt cược và không vượt quá ngân sách cá nhân của bạn.</p>
+
+                    <p><i><b>Hiểu quy tắc chơi:</b></i>Trước khi bắt đầu chơi, hãy hiểu rõ quy tắc và luật chơi của từng phiên bản poker mà bạn tham gia. Điều này sẽ giúp bạn chơi một cách hiệu quả và tránh những sai lầm không cần thiết.</p>
+
+                    <p><i><b>Tìm hiểu về chiến thuật và kỹ năng chơi poker: </b></i>Để nâng cao khả năng chơi poker của mình, hãy tìm hiểu về các chiến thuật, kỹ năng và chiến lược chơi poker. Điều này sẽ giúp bạn cải thiện kỹ năng đánh bài và đưa ra những quyết định thông minh.</p>
+                    <p><i><b>Xây dựng mạng lưới xã hội và giao tiếp: </b></i>383Sports Poker tạo cơ hội để bạn kết nối và giao tiếp với những người chơi khác. Hãy tận dụng tính năng chat và tham gia vào cộng đồng để chia sẻ kinh nghiệm, học hỏi từ người chơi khác và tạo mối quan hệ xã hội trong trò chơi</p>
+                    <p><i><b>Bảo mật thông tin cá nhân: </b></i>Luôn luôn bảo vệ thông tin cá nhân của bạn khi tham gia 383Sports Poker. Đảm bảo rằng bạn chỉ chia sẻ thông tin cần thiết và tránh tiết lộ thông tin nhạy cảm cho người chơi khác.</p>
+
+                    <p><i><b>Theo dõi tài khoản và giao dịch:  </b></i>Hãy kiểm tra và theo dõi các hoạt động tài khoản và giao dịch của bạn thường xuyên. Nếu có bất kỳ hoạt động đáng ngờ nào, hãy báo cáo ngay lập tức cho đội ngũ hỗ trợ của 383Sports Poker.</p>
+
+                
+
+
+                    <p>Những lưu ý trên giúp đảm bảo trải nghiệm chơi 383Sports Poker của bạn được an toàn, trách nhiệm và thú vị. Hãy luôn tận hưởng trò chơi một cách tích cực và tìm hiểu để phát triển kỹ năng của mình.</p>
+
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Tại sao Poker hấp dẫn và được khuyến khích tham gia </h2>
+                    <h2 class="text-[20px] md:text-2xl font-medium">Sự hồi hộp của trò chơi  </h2>
+                   <p>Một trong những lý do chính khiến poker trở nên thú vị là sự hồi hộp của trò chơi. Không giống như các trò chơi sòng bạc khác, poker không chỉ dựa vào may mắn. Người chơi phải sử dụng các kỹ năng và chiến lược của mình để vượt qua đối thủ. Sự không chắc chắn của trò chơi và khả năng thắng lớn khiến nó trở nên cuốn hút hơn. Khả năng lừa bịp và đọc vị quân bài cũng là điểm khiến trò chơi thú vị hơn. </p>
+                    <h2 class="text-[20px] md:text-2xl font-medium">Sự tương tác xã hội </h2>
+                    
+
+                    <p>Poker là một trò chơi được chơi tốt nhất với những người khác. Đó là một cách tuyệt vời để giao tiếp và kết bạn mới. Trò chơi yêu cầu người chơi tương tác với nhau, điều này có thể dẫn đến những cuộc trò chuyện thú vị và những kết nối mới. Nhiều người thích chơi poker như một cách để thư giãn sau một ngày dài hoặc dành thời gian cho bạn bè và gia đình.</p>
+                    <h1 class="text-[20px] md:text-2xl font-medium">Sự khích lệ tinh thần </h1>
+                    <p>Poker là trò chơi đòi hỏi tinh thần nhanh nhẹn và nhạy bén. Người chơi phải sử dụng các kỹ năng phân tích của mình để tính toán tỷ lệ cược và đánh giá tình hình. Trò chơi cũng yêu cầu người chơi phải suy nghĩ chiến lược và có thể điều chỉnh chiến lược của họ một cách nhanh chóng. Các nghiên cứu đã chỉ ra rằng chơi poker có thể cải thiện chức năng nhận thức và trí nhớ.</p>
+                    <h1 class="text-[20px] md:text-2xl font-medium">Lịch sử về Poker </h1>
+                    <p>Poker có nguồn gốc từ trò chơi Persian “As Nas” vào thế kỷ 16 và trở nên phổ biến ở nhiều quốc gia. Nó đã được đưa vào Mỹ vào thế kỷ 19 và trở thành một trò chơi phổ biến tại các khu vực khai thác vàng và bạc. Poker hiện đại bắt đầu hình thành vào những năm 1970 và đã phát triển mạnh mẽ trên toàn thế giới, trở thành một môn thể thao trí tuệ với nhiều giải đấu lớn được tổ chức trên toàn thế giới..</p>
+                    <h2 class="text-[20px] md:text-2xl font-medium"><b>Câu hỏi thường gặp về Poker tại 383Sports Casino </b>
+                    </h2>
+                    <h2 class="text-[20px] md:text-2xl font-medium">Poker trực tiếp  và online/383Sports poker có gì khác biệt? 
+                    </h2>
+                    <p>Poker cơ bản vẫn giống nhau dù được chơi trực tiếp hay trực tuyến. Luật cơ bản không thay đổi và trò chơi diễn ra chủ yếu theo cách tương tự. Tuy nhiên, có một số khác biệt đáng chú ý mà bạn cần tập trung vào. Một khác biệt đáng kể là tốc độ của trò chơi, vì chơi online nhanh hơn rất nhiều so với chơi trực tiếp. Chơi trực tuyến cũng thuận tiện hơn rất nhiều; nó cung cấp một loạt trò chơi đa dạng và có nhiều mức cược khác nhau để phù hợp với nhu cầu cá nhân của bạn.</p>
+                    <h2 class="text-[20px] md:text-2xl font-medium">383Sports Poker trực tuyến có hợp pháp không? 
+                    </h2>
+                    <p>383Sports Poker hoàn toàn hợp pháp tại Việt Nam và nhiều quốc gia trên thế giới. Luật liên quan đến các loại cờ bạc trực tuyến khác nhau có sự khác biệt tùy thuộc vào vùng lãnh thổ khác nhau trên thế giới.
+                    </p>
+                    <h2 class="text-[20px] md:text-2xl font-medium">Liệu chơi 383Sports poker trực tuyến có bị gian lận không?
+                    </h2>
+                    <p>Không. Đây là một lo ngại phổ biến của những người chơi poker trực tuyến, nhưng thực tế thì không đáng lo ngại. 383Sports Poker luôn đảm bảo công bằng cao nhất cho người chơi bằng máy móc, phần mềm, kỹ thuật – công nghệ tiến tiến, hiện đại tối ưu. Cũng như có sự kiểm duyệt của bên thứ 3 để luôm chắc chắn về sự công bằng – minh bạch và uy tín của Sòng 383Sports Casino.
+                    </p>
+
+                    <h2 class="text-[20px] md:text-2xl font-medium">Tôi có thể tin tưởng trang web 383Sports poker với tiền của mình không?
+                    </h2>
+                    <p>Có! Bạn có thể tin tưởng 383Sports poker với tiền của bạn, 383Sports Casino được đánh giá người dùng bởi sự uy tín hàng đầu thế giới.
+                    </p>
+                    <h2 class="text-[20px] md:text-2xl font-medium">Tôi có phải tải phần mềm để chơi? 
+                    </h2>
+                    <p>Không nhất thiết. Trang web 383Sports Casino cung cấp khả năng chơi 383Sports Poker trực tiếp từ trình duyệt web của bạn.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--foooter -->
+    <footer class="from-black to-sky-800 bg-gradient-to-b text-white ">
+        <div class="container flex justify-center items-center">
+            <div class="p-2 ">
+                <div class="mt-10 mb-10  grid grid-cols-2 md:grid-cols-3 gap-12 justify-center items-center">
+                    <div class="logo flex justify-center items-center">
+                        <img src="./images/383sports-tet.png" alt="">
+                    </div>
+                    <div class="img-icon flex justify-center items-center">
+                        <img src="./images/Screenshot 2024-06-13 162004.png" alt="">
+                    </div>
+                    <div class=" space-x-2 text-[18px] flex justify-center items-center">
+                        <div class="icon f">
+                            <img src="./images/vi.png" alt="" class="sm:w-12 w-28">
+                        </div>
+                        <div class="">
+                            <span>Tiếngviệt</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center border-b items-center">
+                    <span class="text-2xl">Categories</span>
+                    <span></span>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 cursor-pointer gap-8 justify-center  mx-auto ">
+                    <div class="w-full flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Đăng-nhập-vào-Casino-383Sport.html"
+                                        class="hover:text-blue-400 ">Đăng nhập vào Casino
+                                        383Sports</a></li>
+                                <li class="hover:border-b"><a href="./Phương-thức-rút-tiền.html"
+                                        class="hover:text-blue-400 ">Phương thức rút tiền </a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Sòng-bạc-trực-tiếp.html"
+                                        class="hover:text-blue-400 ">Sòng bạc trực tiếp</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Blackjack.html"
+                                        class="hover:text-blue-400 ">Blackjack</a></li>
+                                <li class="hover:border-b"><a href="./Poker.html" class="hover:text-blue-400 ">Poker</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--col2-->
+                    <div class="col2 flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Đăng-ký-tại-sòng-bạc-383Sports.html"
+                                        class="hover:text-blue-400 ">
+                                        Đăng ký tại sòng bạc 383Sports</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Ứng-dụng-di-động-383Sports.html"
+                                        class="hover:text-blue-400 ">Ứng dụng di động 383Sports</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Trò-chơi-trên-bàn.html"
+                                        class="hover:text-blue-400 ">Trò chơi trên bàn</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Roulette.html"
+                                        class="hover:text-blue-400 ">Roulette</a></li>
+                                <li class="hover:border-b"><a href="./Jackpot.html"
+                                        class="hover:text-blue-400 ">Jackpot</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--col3-->
+                    <div class="col3 flex justify-center ">
+                        <div class="menu mt-10 ">
+                            <ul class="space-y-6">
+                                <li class="hover:border-b"><a href="./Tiền-thưởng-383Sports-Casino.html"
+                                        class="hover:text-blue-400 ">
+                                        Tiền thưởng 383Sports Casino</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Phương-thức-nạp-tiền.html"
+                                        class="hover:text-blue-400 ">Phương thức nạp tiền</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Cá-cược-thể-thao.html"
+                                        class="hover:text-blue-400 ">Cá cược thể thao</a>
+                                </li>
+                                <li class="hover:border-b"><a href="./Baccarat.html"
+                                        class="hover:text-blue-400 ">Baccarat</a></li>
+                                <li class="hover:border-b"><a href="./Lottery.html"
+                                        class="hover:text-blue-400 ">Lottery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!--backtop-->
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
